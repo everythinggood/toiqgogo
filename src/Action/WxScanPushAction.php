@@ -40,9 +40,9 @@ class WxScanPushAction implements ActionInterface
         /** @var Request $request*/
         $this->logger->addInfo('WxScanPush',$request->getParams());
 
-        $this->logger->addInfo('WxScanPush---XML:  '.$request->getBody()->getContents());
-
         $content = $request->getBody()->getContents();
+
+        $this->logger->addInfo('WxScanPush---XML:  '.$content);
 
         $arr = $this->convertXMLToArr($content);
 
