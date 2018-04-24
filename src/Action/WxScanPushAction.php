@@ -46,6 +46,8 @@ class WxScanPushAction implements ActionInterface
 
         $arr = $this->convertXMLToArr($content);
 
+        $this->logger->addInfo('xmlToArr',$arr);
+
         if($toUser = $arr['FromUserName']){
             $this->sendCustomMessage($toUser);
         }
@@ -77,8 +79,10 @@ class WxScanPushAction implements ActionInterface
                 ]
             ]);
 
-            $this->logger->addInfo('sendCustomMessage',json_decode($response->getBody()->getContents(),true));
+            $this->logger->addInfo('sendCustomMessage success',json_decode($response->getBody()->getContents(),true));
         }
+
+        $this->logger->addInfo('sendCustomMessage fail',['code'=>'access_token is not found!']);
     }
 
 }
