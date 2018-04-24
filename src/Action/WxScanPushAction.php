@@ -80,9 +80,11 @@ class WxScanPushAction implements ActionInterface
             ]);
 
             $this->logger->addInfo('sendCustomMessage success',json_decode($response->getBody()->getContents(),true));
+        }else{
+
+            $this->logger->addInfo('sendCustomMessage fail',['code'=>'access_token is not found!']);
         }
 
-        $this->logger->addInfo('sendCustomMessage fail',['code'=>'access_token is not found!']);
     }
 
 }
