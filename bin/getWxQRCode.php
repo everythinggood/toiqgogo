@@ -32,5 +32,11 @@ $response = $client->request('POST','https://api.weixin.qq.com/cgi-bin/qrcode/cr
 
 var_export($response->getBody()->getContents());
 
+/**
+ * ticket 换取二维码图片
+ *
+ * https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=TICKET
+ */
+
 
 
