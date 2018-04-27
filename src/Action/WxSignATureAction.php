@@ -78,8 +78,6 @@ class WxSignATureAction implements ActionInterface
 
         /** @var Response $response */
 
-        $response = $response->withHeader('Content-type','text/html; charset=utf-8');
-
         if($signature == $params){
 
             $this->logger->addInfo('token 认证成功');
