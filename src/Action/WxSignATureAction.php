@@ -47,7 +47,7 @@ class WxSignATureAction implements ActionInterface
 
         switch ($xml['MsgType']){
             case "text" :
-                $response = $this->sendTextMessage($xml['ToUserName'],$xml['FromUserName'],$response);
+                $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
                 break;
             default :
                 $response->write('success');
