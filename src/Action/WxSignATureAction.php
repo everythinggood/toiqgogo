@@ -36,6 +36,8 @@ class WxSignATureAction implements ActionInterface
 
         $this->logger->addInfo('xml data: ',[$content]);
 
+        $this->logger->addInfo("request: ".var_export($request));
+
 
         /** @var Request $request */
         if($request->getParam('signature')){
