@@ -10,6 +10,7 @@ namespace Action;
 
 
 use Contract\Container;
+use GuzzleHttp\Psr7\ServerRequest;
 use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -32,6 +33,25 @@ class WxSignATureAction implements ActionInterface
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
+        /** @var Request $request */
+        if($request->getParam('signature')){
+            $this->checkSignature($request);
+        }
+        /**
+         * xml  data
+         *
+         */
+        $content = $request->getBody()->getContents();
+
+        $this->logger->addInfo('xml data: ',[$content]);
+
+        return $response;
+
+
+
+    }
+
+    protected function checkSignature(ServerRequestInterface $request){
         /** @var Request $request */
         $this->logger->addInfo('请求获取参数',$request->getParams());
         $signature = $request->getParam('signature');
@@ -57,13 +77,9 @@ class WxSignATureAction implements ActionInterface
 
         }else{
 
-            return $response->write($echostr);
+            return $response;
 
         }
-
-
-
-
     }
 
 
