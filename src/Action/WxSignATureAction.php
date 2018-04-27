@@ -47,6 +47,7 @@ class WxSignATureAction implements ActionInterface
 
         switch ($xml['MsgType']){
             case "text" :
+                $response = $response->withHeader('Content-type','text/xml');
                 $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
                 break;
             default :
@@ -54,7 +55,6 @@ class WxSignATureAction implements ActionInterface
                 break;
         }
 
-        $this->logger->addInfo('response: '.$response->getBody()->getContents());
         return $response;
 
 
