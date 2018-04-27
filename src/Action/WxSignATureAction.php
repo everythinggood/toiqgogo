@@ -34,22 +34,42 @@ class WxSignATureAction implements ActionInterface
 
         $content = $request->getBody()->getContents();
 
-        $this->logger->addInfo('xml data: ',[$content]);
+//        $this->logger->addInfo('xml data: ',[$content]);
 
         /** @var Request $request */
 //        if($request->getParam('echostr')){
 //            return $this->checkSignature($request,$response);
 //        }
 
-        /**
-         * xml  data
-         * @var Response $response
-         */
+        $xml = $this->convertXMLToArr($content);
+
+        /** @var Response $response */
+
+        switch ($xml['MsgType']){
+            case "text" :
+                $response = $this->sendTextMessage($xml['ToUserName'],$xml['FromUserName'],$response);
+                break;
+            default :
+                $response->write('success');
+                break;
+        }
 
         return $response;
 
 
 
+    }
+
+    protected function sendTextMessage($toUserName,$fromUserName,ResponseInterface $response){
+
+        $return = "<xml> <ToUserName>< ![CDATA[%s] ]></ToUserName> <FromUserName>< ![CDATA[%s] ]></FromUserName> <CreateTime>%s</CreateTime> <MsgType>< ![CDATA[text] ]></MsgType> <Content>< ![CDATA[%s] ]></Content> </xml>";
+
+        $content = '欢迎';
+
+        $return  = sprintf($return,$toUserName,$fromUserName,time(),$content);
+
+        /** @var Response $response */
+        return $response->write($return);
     }
 
     protected function checkSignature(ServerRequestInterface $request,ResponseInterface $response){
@@ -90,5 +110,12 @@ class WxSignATureAction implements ActionInterface
         }
     }
 
+    protected function convertXMLToArr($content){
+
+        libxml_disable_entity_loader(true);
+        $arr = json_decode(json_encode(simplexml_load_string($content, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+
+        return $arr;
+    }
 
 }
