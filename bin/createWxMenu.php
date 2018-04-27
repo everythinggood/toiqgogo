@@ -26,7 +26,13 @@ $response = $client->request('POST','https://api.weixin.qq.com/cgi-bin/menu/crea
                 "type"=>"scancode_push",
                 "name"=>"扫码领取纸巾",
                 "key"=>"scan_get_paper"
-            ]
+            ],
+            [
+                "type"=>"view",
+                "name"=>"商户平台",
+                "url"=>"http://m.zhiwei99.com/app"
+            ],
+
         ]
     ],JSON_UNESCAPED_UNICODE)
 ]);
