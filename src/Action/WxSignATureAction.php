@@ -54,7 +54,7 @@ class WxSignATureAction implements ActionInterface
                 break;
         }
 
-        $this->logger->addInfo('response: ',[$response->getBody()->getContents()]);
+        $this->logger->addInfo('response: '.$response->getBody()->getContents());
         return $response;
 
 
