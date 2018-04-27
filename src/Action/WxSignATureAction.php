@@ -46,7 +46,7 @@ class WxSignATureAction implements ActionInterface
          * @var Response $response
          */
 
-        return $response->write('success');
+        return $response;
 
 
 
