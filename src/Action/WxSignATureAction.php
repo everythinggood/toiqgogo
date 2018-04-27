@@ -10,14 +10,12 @@ namespace Action;
 
 
 use Contract\Container;
-use GuzzleHttp\Psr7\ServerRequest;
 use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
-use Slim\Http\Stream;
 
 class WxSignATureAction implements ActionInterface
 {
@@ -41,7 +39,7 @@ class WxSignATureAction implements ActionInterface
 
         /** @var Request $request */
         if($request->getParam('signature')){
-            $this->checkSignature($request);
+            $this->checkSignature($request,$response);
         }
         /**
          * xml  data
@@ -54,7 +52,7 @@ class WxSignATureAction implements ActionInterface
 
     }
 
-    protected function checkSignature(ServerRequestInterface $request){
+    protected function checkSignature(ServerRequestInterface $request,ResponseInterface $response){
         /** @var Request $request */
         $this->logger->addInfo('请求获取参数',$request->getParams());
         $signature = $request->getParam('signature');
@@ -87,7 +85,7 @@ class WxSignATureAction implements ActionInterface
         }else{
 
             $this->logger->addInfo('token 认证失败');
-            return $response->write($echostr);
+            return $response;
 
         }
     }
