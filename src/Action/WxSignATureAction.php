@@ -33,6 +33,11 @@ class WxSignATureAction implements ActionInterface
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
+        $content = $request->getBody()->getContents();
+
+        $this->logger->addInfo('xml data: ',[$content]);
+
+
         /** @var Request $request */
         if($request->getParam('signature')){
             $this->checkSignature($request);
@@ -41,9 +46,6 @@ class WxSignATureAction implements ActionInterface
          * xml  data
          *
          */
-        $content = $request->getBody()->getContents();
-
-        $this->logger->addInfo('xml data: ',[$content]);
 
         return $response;
 
