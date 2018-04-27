@@ -78,7 +78,7 @@ class WxSignATureAction implements ActionInterface
 
         /** @var Response $response */
 
-        $response = $response->withHeader('Content-Type','text/html; charset=utf-8');
+        $response = $response->withHeader('Content-type','text/html; charset=utf-8');
 
         if($signature == $params){
 
