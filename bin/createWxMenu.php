@@ -32,11 +32,11 @@ $response = $client->request('POST','https://api.weixin.qq.com/cgi-bin/menu/crea
                 "name"=>"商户平台",
                 "url"=>"http://m.zhiwei99.com/app"
             ],
-            [
-                "type"=>"media_id",
-                "name"=>"测试文章",
-                "media_id"=>"IlC20hf1bqsB2u-j6MIDAg44X6YbIwcBKdjqM-cW2SM"
-            ]
+//            [
+//                "type"=>"media_id",
+//                "name"=>"测试文章",
+//                "media_id"=>"IlC20hf1bqsB2u-j6MIDAg44X6YbIwcBKdjqM-cW2SM"
+//            ]
 
         ]
     ],JSON_UNESCAPED_UNICODE)
