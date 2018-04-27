@@ -37,25 +37,25 @@ class WxSignATureAction implements ActionInterface
         $this->logger->addInfo('xml data: ',[$content]);
 
         /** @var Request $request */
-        if($request->getParam('echostr')){
-            return $this->checkSignature($request,$response);
-        }
+//        if($request->getParam('echostr')){
+//            return $this->checkSignature($request,$response);
+//        }
 
-        $xml = $this->convertXMLToArr($content);
-
+//        $xml = $this->convertXMLToArr($content);
+//
         /** @var Response $response */
+//
+//        switch ($xml['MsgType']){
+//            case "text" :
+//                $response = $response->withHeader('Content-type','text/xml');
+//                $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
+//                break;
+//            default :
+//                $response->write('success');
+//                break;
+//        }
 
-        switch ($xml['MsgType']){
-            case "text" :
-                $response = $response->withHeader('Content-type','text/xml');
-                $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
-                break;
-            default :
-                $response->write('success');
-                break;
-        }
-
-        return $response;
+        return $response->write('success');
 
 
 
