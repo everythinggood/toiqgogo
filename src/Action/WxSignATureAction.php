@@ -39,7 +39,7 @@ class WxSignATureAction implements ActionInterface
 
         /** @var Request $request */
         if($request->getParam('signature')){
-            $this->checkSignature($request,$response);
+            return $this->checkSignature($request,$response);
         }
         /**
          * xml  data
