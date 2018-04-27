@@ -6,6 +6,6 @@
 // Routes
 $app->get('/',\Action\FontMainViewAction::class);
 
-$app->map(['GET','POST'],'/wxSignature',\Action\WxSignATureAction::class);
+$app->any('/wxSignature',\Action\WxSignATureAction::class);
 
 $app->map(['GET','POST'],'/wxScanPush',\Action\WxScanPushAction::class);
