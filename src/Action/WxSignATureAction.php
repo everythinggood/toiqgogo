@@ -65,6 +65,8 @@ class WxSignATureAction implements ActionInterface
 
         $params = compact('timestamp','nonce','token');
 
+        $this->logger->addInfo('params',$params);
+
         sort($params,SORT_STRING);
 
         $params = implode($params);
