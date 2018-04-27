@@ -44,10 +44,10 @@ class WxSignATureAction implements ActionInterface
         }
         /**
          * xml  data
-         *
+         * @var Response $response
          */
 
-        return $response;
+        return $response->write('success');
 
 
 
