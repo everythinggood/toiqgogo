@@ -41,13 +41,13 @@ class WxSignATureAction implements ActionInterface
             return $this->checkSignature($request,$response);
         }
 
+        /** @var Response $response */
 
         if($content){
 
             $xml = $this->convertXMLToArr($content);
             $this->logger->addInfo('xml to arr: ',$xml);
 //
-            /** @var Response $response */
 
             switch ($xml['MsgType']){
                 case "text" :
@@ -58,9 +58,11 @@ class WxSignATureAction implements ActionInterface
                     $response->write('success');
                     break;
             }
+            return $response;
+        }else{
+            return $response->write('success');
         }
 
-        return $response;
 
 
 
