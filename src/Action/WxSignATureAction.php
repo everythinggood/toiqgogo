@@ -56,7 +56,7 @@ class WxSignATureAction implements ActionInterface
                 break;
         }
 
-        return $response->write('success');
+        return $response;
 
 
 
