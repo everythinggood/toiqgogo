@@ -33,6 +33,7 @@ class WxSignATureAction implements ActionInterface
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
+
         $content = $request->getBody()->getContents();
 
         $this->logger->addInfo('xml data: ',[$content]);
@@ -60,8 +61,9 @@ class WxSignATureAction implements ActionInterface
         $timestamp = $request->getParam('timestamp');
         $nonce = $request->getParam('nonce');
         $echostr = $request->getParam('echostr');
+        $token = "helloyi123";
 
-        $params = compact('signature','timestamp','nonce','echostr');
+        $params = compact('signature','timestamp','nonce','token');
 
         sort($params,SORT_STRING);
 
