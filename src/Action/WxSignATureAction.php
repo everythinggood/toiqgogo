@@ -89,7 +89,7 @@ class WxSignATureAction implements ActionInterface
         }else{
 
             $this->logger->addInfo('token 认证失败');
-            return $response;
+            return $response->write($echostr);
 
         }
     }
