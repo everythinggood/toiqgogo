@@ -41,7 +41,8 @@ class WxSignATureAction implements ActionInterface
 //            return $this->checkSignature($request,$response);
 //        }
 
-//        $xml = $this->convertXMLToArr($content);
+        $xml = $this->convertXMLToArr($content);
+        $this->logger->addInfo('xml to arr: ',$xml);
 //
         /** @var Response $response */
 
