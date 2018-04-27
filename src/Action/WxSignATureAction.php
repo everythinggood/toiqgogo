@@ -44,16 +44,16 @@ class WxSignATureAction implements ActionInterface
 //        $xml = $this->convertXMLToArr($content);
 //
         /** @var Response $response */
-//
-//        switch ($xml['MsgType']){
-//            case "text" :
-//                $response = $response->withHeader('Content-type','text/xml');
-//                $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
-//                break;
-//            default :
-//                $response->write('success');
-//                break;
-//        }
+
+        switch ($xml['MsgType']){
+            case "text" :
+                $response = $response->withHeader('Content-type','text/xml');
+                $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
+                break;
+            default :
+                $response->write('success');
+                break;
+        }
 
         return $response->write('success');
 
@@ -63,7 +63,7 @@ class WxSignATureAction implements ActionInterface
 
     protected function sendTextMessage($toUserName,$fromUserName,ResponseInterface $response){
 
-        $return = "<xml> <ToUserName><![CDATA[%s]]></ToUserName> <FromUserName><![CDATA[%s]]></FromUserName> <CreateTime>%s</CreateTime> <MsgType><![CDATA[text]]></MsgType> <Content><![CDATA[%s]]></Content> </xml>";
+        $return = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[%s]]></Content></xml>";
 
         $content = '欢迎';
 
