@@ -10,6 +10,8 @@ namespace Action;
 
 
 use Contract\Container;
+use Contract\Event;
+use GuzzleHttp\Client;
 use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -23,10 +25,15 @@ class WxSignATureAction implements ActionInterface
      * @var Logger
      */
     private $logger;
+    /**
+     * @var Client
+     */
+    private $client;
 
     public function __construct(ContainerInterface $container)
     {
         $this->logger = $container[Container::NAME_LOGGER];
+        $this->client = new Client();
     }
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
@@ -54,6 +61,10 @@ class WxSignATureAction implements ActionInterface
                     $response = $response->withHeader('Content-type','text/xml');
                     $response = $this->sendTextMessage($xml['FromUserName'],$xml['ToUserName'],$response);
                     break;
+                case "event" :
+                    $response = $response->withHeader('Content-type','tet/xml');
+                    $response = $this->handleEvent($xml,$response);
+                    break;
                 default :
                     $response->write('success');
                     break;
@@ -65,6 +76,58 @@ class WxSignATureAction implements ActionInterface
 
 
 
+
+    }
+
+    protected function handleEvent(array $xml,Response $response){
+
+        switch ($xml['Event']){
+            case Event::CLICK:
+                break;
+            case Event::LOCATION:
+                break;
+            case Event::SCAN:
+                $this->sendCustomMessage($xml['FromUserName']);
+                break;
+            case Event::SUBSCRIBE:
+//                if($xml['EventKey']){
+//
+//                }
+                $this->sendCustomMessage($xml['FromUserName']);
+                break;
+            case Event::VIEW:
+                break;
+            default:
+                $response->write('success');
+        }
+
+        return $response;
+
+    }
+
+    protected function sendCustomMessage(String $toUser){
+        $fileName = __DIR__.'/../../cache/access_token';
+        if(file_exists(__DIR__.'/../../cache/access_token')){
+            $access_token = file_get_contents($fileName);
+
+            /**
+             * 神经病 腾讯 a标签href要带双引号 ，并且a标签后面不能带空格
+             */
+            $response = $this->client->request('POST', 'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=' . $access_token ,[
+                'body' => json_encode([
+                    'touser' => $toUser,
+                    'msgtype' => 'text',
+                    'text' => [
+                        'content' => "请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=412\">免费领取纸巾</a>]"
+                    ]
+                ],JSON_UNESCAPED_UNICODE)
+            ]);
+
+            $this->logger->addInfo('sendCustomMessage success',json_decode($response->getBody()->getContents(),true));
+        }else{
+
+            $this->logger->addInfo('sendCustomMessage fail',['code'=>'access_token is not found!']);
+        }
 
     }
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Contract/Event.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Action/WxSignATureAction.php" afterPath="$PROJECT_DIR$/src/Action/WxSignATureAction.php" />
     </list>
@@ -30,12 +31,22 @@
       <file leaf-file-name="WxSignATureAction.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Action/WxSignATureAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="62" column="47" lean-forward="false" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+            <state relative-caret-position="146">
+              <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
               <folding>
                 <element signature="e#107#130#0#PHP" expanded="true" />
-                <marker date="1524823293832" expanded="true" signature="1756:1945" ph="..." />
+                <marker date="1524827394247" expanded="true" signature="3855:4044" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Contract/Event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,8 +86,8 @@
       <file leaf-file-name="WxScanPushAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action/WxScanPushAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="64" column="5" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="468">
+              <caret line="90" column="5" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
               <folding>
                 <element signature="e#106#129#0#PHP" expanded="true" />
               </folding>
@@ -150,6 +161,7 @@
         <option value="$PROJECT_DIR$/tests/scrapy/test.php" />
         <option value="$PROJECT_DIR$/bin/getWxQRCode.php" />
         <option value="$PROJECT_DIR$/src/routes.php" />
+        <option value="$PROJECT_DIR$/src/Contract/Event.php" />
         <option value="$PROJECT_DIR$/src/Action/WxSignATureAction.php" />
       </list>
     </option>
@@ -253,6 +265,12 @@
             <path>
               <item name="toiqgogo" type="b2602c69:ProjectViewProjectNode" />
               <item name="toiqgogo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Contract" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="toiqgogo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toiqgogo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -317,7 +335,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524537326862</updated>
       <workItem from="1524537328199" duration="14057000" />
-      <workItem from="1524821957888" duration="1336000" />
+      <workItem from="1524821957888" duration="4189000" />
     </task>
     <task id="LOCAL-00001" summary="add bin/console and add WxScanPush">
       <created>1524556374772</created>
@@ -634,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524822841500</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="test">
+      <created>1524823301783</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1524823301783</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30072000" />
+    <option name="totallyTimeSpent" value="32925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -715,13 +740,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/font/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="93" column="33" lean-forward="true" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/ActionInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -885,7 +903,7 @@
           <caret line="50" column="60" lean-forward="false" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
           <folding>
             <element signature="e#107#130#0#PHP" expanded="true" />
-            <marker date="1524823293832" expanded="true" signature="1756:1945" ph="..." />
+            <marker date="1524827394247" expanded="true" signature="3855:4044" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1063,16 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/WxScanPushAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="64" column="5" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <element signature="e#106#129#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1081,13 +1089,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contract/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action/WxScanPushAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="90" column="5" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
+          <folding>
+            <element signature="e#106#129#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/WxSignATureAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="62" column="47" lean-forward="false" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+        <state relative-caret-position="146">
+          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
           <folding>
             <element signature="e#107#130#0#PHP" expanded="true" />
-            <marker date="1524823293832" expanded="true" signature="1756:1945" ph="..." />
+            <marker date="1524827394247" expanded="true" signature="3855:4044" ph="..." />
           </folding>
         </state>
       </provider>
