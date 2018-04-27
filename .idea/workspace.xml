@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="test">
+    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/getWxQRCode.php" afterPath="$PROJECT_DIR$/bin/getWxQRCode.php" />
+      <change beforePath="$PROJECT_DIR$/src/Action/WxSignATureAction.php" afterPath="$PROJECT_DIR$/src/Action/WxSignATureAction.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WxSignATureAction.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WxSignATureAction.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Action/WxSignATureAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+            <state relative-caret-position="168">
+              <caret line="41" column="11" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="41" selection-end-column="11" />
               <folding>
                 <element signature="e#107#130#0#PHP" expanded="true" />
               </folding>
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getWxQRCode.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getWxQRCode.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/getWxQRCode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="360">
+              <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/bin/getAccessToken.php" />
         <option value="$PROJECT_DIR$/src/routes.php" />
         <option value="$PROJECT_DIR$/tests/scrapy/test.php" />
-        <option value="$PROJECT_DIR$/src/Action/WxSignATureAction.php" />
         <option value="$PROJECT_DIR$/bin/getWxQRCode.php" />
+        <option value="$PROJECT_DIR$/src/Action/WxSignATureAction.php" />
       </list>
     </option>
   </component>
@@ -489,11 +489,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524808187209</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="test">
+      <created>1524809220526</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1524809220526</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22588000" />
+    <option name="totallyTimeSpent" value="22799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -919,21 +926,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/WxSignATureAction.php">
+    <entry file="file://$PROJECT_DIR$/bin/getWxQRCode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding>
-            <element signature="e#107#130#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/getWxQRCode.php">
+    <entry file="file://$PROJECT_DIR$/src/Action/WxSignATureAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="41" column="11" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="41" selection-end-column="11" />
+          <folding>
+            <element signature="e#107#130#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
