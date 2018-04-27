@@ -36,7 +36,7 @@ class WxSignATureAction implements ActionInterface
 
         $this->logger->addInfo('xml data: ',[$content]);
 
-        $this->logger->addInfo("request: ",json_decode(json_encode(var_export($request))));
+        $this->logger->addInfo("request: ",json_decode(json_encode($request)));
 
 
         /** @var Request $request */
