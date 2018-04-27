@@ -63,7 +63,7 @@ class WxSignATureAction implements ActionInterface
         $echostr = $request->getParam('echostr');
         $token = "helloyi123";
 
-        $params = compact('signature','timestamp','nonce','token');
+        $params = compact('timestamp','nonce','token');
 
         sort($params,SORT_STRING);
 
