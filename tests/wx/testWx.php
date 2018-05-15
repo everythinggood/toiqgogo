@@ -13,7 +13,7 @@ $client = new \GuzzleHttp\Client();
 $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=snsapi_base&state=%s#wechat_redirect";
 
 $appId = 'wxbd42adf0827322ad';
-$redirect_url = 'http://www.toiqgogo.com/index';
+$redirect_url = 'http://toiqgogo.com/index';
 $state = '123';
 
 $url = sprintf($url,$appId,urlencode($redirect_url),$state);
