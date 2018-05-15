@@ -8,8 +8,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$appId = 'wxd1bd940d852cb646';
-$secret = 'ad54de974213f49f43fb087c86e6cc37';
+$appId = 'wxbd42adf0827322ad';
+$secret = '31a3f1d179433ee6e58511a4af66ad91';
 
 $client = new \GuzzleHttp\Client();
 
