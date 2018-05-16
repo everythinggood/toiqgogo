@@ -10,7 +10,6 @@ namespace Handler;
 
 
 use Contract\ENV;
-use Dotenv\Dotenv;
 use GuzzleHttp\Client;
 use Monolog\Logger;
 use Slim\Container;
@@ -27,10 +26,6 @@ class WxJsHandler
      */
     private $setting;
     /**
-     * @var Dotenv
-     */
-    private $env;
-    /**
      * @var Client
      */
     private $client;
@@ -42,8 +37,7 @@ class WxJsHandler
     public function __construct(Container $container)
     {
         $this->logger = $container[\Contract\Container::NAME_LOGGER];
-        $this->setting = $container[\Contract\Container::NAME_SETTING];
-        $this->env = $container[\Contract\Container::NAME_ENV];
+        $this->setting = $container[\Contract\Container::NAME_SETTING]['wx'];
         $this->client = $container[\Contract\Container::NAME_HTTP_CLIENT];
     }
 
@@ -51,7 +45,11 @@ class WxJsHandler
     {
         $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=snsapi_base&state=%s#wechat_redirect";
 
-        return sprintf($url, getenv(ENV::ENV_APP_ID), urlencode(getenv(ENV::ENV_REDIRECT_URL)), $state);
+        $url = sprintf($url,$this->setting[ENV::ENV_APP_ID], urlencode($this->setting[ENV::ENV_REDIRECT_URL]), $state);
+
+        $this->logger->addInfo("genera snsapi_base Url: [$url]");
+
+        return $url;
 
     }
 
@@ -59,7 +57,11 @@ class WxJsHandler
     {
         $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=code&scope=snsapi_userinfo&state=%s#wechat_redirect';
 
-        return sprintf($url, getenv(ENV::ENV_APP_ID), urlencode(getenv(ENV::ENV_REDIRECT_URL)), $state);
+        $url = sprintf($url, $this->setting[ENV::ENV_APP_ID], urlencode($this->setting[ENV::ENV_REDIRECT_URL]), $state);
+
+        $this->logger->addInfo("genera snsapi_userinfo Url: [$url]");
+
+        return ;
     }
 
     /**
@@ -75,11 +77,15 @@ class WxJsHandler
     public function getOpenidByCode($code){
         $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code';
 
-        $url = sprintf($url,getenv(ENV::ENV_APP_ID),getenv(ENV::ENV_APP_SECRET),$code);
+        $url = sprintf($url,$this->setting[ENV::ENV_APP_ID],$this->setting[ENV::ENV_APP_SECRET],$code);
+
+        $this->logger->addInfo("get openId by code: [$url]");
 
         $response = $this->client->get($url);
 
         $json = \GuzzleHttp\json_decode($response->getBody()->getContents(),true);
+
+        $this->logger->addInfo("response on weixin.qq.com:",$json);
 
         return array_key_exists('openid',$json)?$json['openid']:null;
 
@@ -119,9 +125,13 @@ class WxJsHandler
 
         $url = sprintf($url,$accessToken,$openId);
 
+        $this->logger->addInfo("get userInfo on weixin.qq.com: [$url]");
+
         $response = $this->client->get($url);
 
         $json = json_decode($response->getBody()->getContents(),true);
+
+        $this->logger->addInfo('response on weixin.qq.com: ',$json);
 
         return array_key_exists('sex',$json)?$json:null;
     }

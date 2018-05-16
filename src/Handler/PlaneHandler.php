@@ -36,7 +36,8 @@ class PlaneHandler
 
     public function getAdQrCode(User $user,$machineCode){
 
+        $adQrCode = 'http://www.baidu.com';
 
-        return null;
+        return $adQrCode;
     }
 }

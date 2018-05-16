@@ -1,4 +1,8 @@
 <?php
+
+$env = new Dotenv\Dotenv(__DIR__.'/../');
+$env->load();
+
 return [
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
@@ -15,5 +19,11 @@ return [
             'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+
+        'wx' => [
+            'appId' => $_ENV['appId'],
+            'appSecret' => $_ENV['appSecret'],
+            'redirect-url' => $_ENV['redirect-url']
+        ]
     ],
 ];

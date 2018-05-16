@@ -18,4 +18,6 @@ $app->group('/wx',function(){
 
    $this->get('/scanInfo',\Wx\Action\WxScanInfoAction::class);
 
+   $this->get('/qrCode',\Wx\Action\QrCodeGeneratorAction::class);
+
 });

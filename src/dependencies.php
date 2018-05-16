@@ -19,14 +19,8 @@ $container[\Contract\Container::NAME_LOGGER] = function (\Psr\Container\Containe
     return $logger;
 };
 
-$container[\Contract\Container::NAME_SETTING] = function (\Psr\Container\ContainerInterface $c,$index){
-  return $c->get('settings')[$index];
-};
-
-$container[\Contract\Container::NAME_ENV] = function (){
-    $env = new \Dotenv\Dotenv(__DIR__.'/../');
-    $env->load();
-    return $env;
+$container[\Contract\Container::NAME_SETTING] = function (\Psr\Container\ContainerInterface $c){
+  return $c->get('settings');
 };
 
 $container[\Contract\Container::NAME_HTTP_CLIENT] = function (){
@@ -43,3 +37,45 @@ $container[\Contract\Container::NAME_HANDLER_PLANE] = function ($c){
 };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//errorHandler
+//$container['errorHandler'] = function ($c) {
+//    return function ($request, $response, $exception) use ($c) {
+//        /** @var \Monolog\Logger $logger */
+//        $logger = $c[\Contract\Container::NAME_LOGGER];
+//        $logger->error(strval($exception), (array)$request);
+//        return $c['response']->withStatus(500)
+//            ->withHeader('Content-Type', 'text/html')
+//            ->write('Something went wrong!');
+//    };
+//};
+//
+//$container['phpErrorHandler'] = function ($c) {
+//    return function ($request, $response, $error) use ($c) {
+//        /** @var \Monolog\Logger $logger */
+//        $logger = $c[\Contract\Container::NAME_LOGGER];
+//        $logger->error(strval($error), (array)$request);
+//        return $c['response']
+//            ->withStatus(500)
+//            ->withHeader('Content-Type', 'text/html')
+//            ->write('Something went wrong!');
+//    };
+//};
