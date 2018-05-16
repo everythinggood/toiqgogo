@@ -14,4 +14,5 @@ interface ENV
     const ENV_APP_ID = 'appId';
     const ENV_APP_SECRET = 'appSecret';
     const ENV_REDIRECT_URL = 'redirect-url';
+    const ENV_MACHINE_SCAN_URL = 'machine-scan-url';
 }

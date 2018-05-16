@@ -9,12 +9,17 @@
 namespace Handler;
 
 
+use Contract\Container;
+use Contract\ENV;
 use Endroid\QrCode\QrCode;
 use Psr\Container\ContainerInterface;
 
 class QrCodeHandler
 {
-
+    /**
+     * @var array
+     */
+    private $setting;
 
     /**
      * QrCodeHandler constructor.
@@ -22,12 +27,12 @@ class QrCodeHandler
      */
     public function __construct(ContainerInterface $container)
     {
-
+        $this->setting = $container[Container::NAME_SETTING]['wx'];
     }
 
     public function getQrCodeByMachineCode(String $machineCode):QrCode
     {
-        $url = sprintf('http://192.168.22.142:8100/wx/index?machineCode=%s',$machineCode);
+        $url = sprintf($this->setting[ENV::ENV_MACHINE_SCAN_URL].'?machineCode=%s',$machineCode);
         $qrCode = new QrCode($url);
 
         return $qrCode;

@@ -23,7 +23,8 @@ return [
         'wx' => [
             'appId' => $_ENV['appId'],
             'appSecret' => $_ENV['appSecret'],
-            'redirect-url' => $_ENV['redirect-url']
+            'redirect-url' => $_ENV['redirect-url'],
+            'machine-scan-url' => $_ENV['machine-scan-url']
         ]
     ],
 ];
