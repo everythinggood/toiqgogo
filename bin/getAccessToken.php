@@ -8,8 +8,11 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$appId = 'wxd1bd940d852cb646';
-$secret = 'ad54de974213f49f43fb087c86e6cc37';
+$env = new \Dotenv\Dotenv(__DIR__.'/../');
+$env->load();
+
+$appId = $_ENV[\Contract\ENV::ENV_APP_ID];
+$secret = $_ENV[\Contract\ENV::ENV_APP_SECRET];
 
 $client = new \GuzzleHttp\Client();
 

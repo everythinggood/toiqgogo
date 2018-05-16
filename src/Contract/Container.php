@@ -16,4 +16,12 @@ interface Container
 
     const NAME_LOGGER = 'logger';
 
+    const NAME_SETTING = 'setting';
+
+    const NAME_HTTP_CLIENT = 'http-client';
+
+    const NAME_HANDLER_WX_JS = 'wx-js-handler';
+
+    const NAME_HANDLER_PLANE = 'plane-handler';
+
 }
