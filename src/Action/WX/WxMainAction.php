@@ -12,6 +12,7 @@ namespace Wx\Action;
 use Action\ActionInterface;
 use Contract\Container;
 use EasyWeChat\Kernel\Messages\Message;
+use EasyWeChat\Kernel\Messages\Text;
 use EasyWeChat\OfficialAccount\Application;
 use Handler\WX\TextMessageHandler;
 use Psr\Container\ContainerInterface;
@@ -48,7 +49,23 @@ class WxMainAction implements ActionInterface
     {
 
         $this->app->server->push(TextMessageHandler::class,Message::TEXT);
+//        $this->app->server->push(EventMessageHandler::class,Message::EVENT);
 
+        $this->app->server->push(function ($message){
+
+            if(array_key_exists('Ticket',$message)){
+                $scene = str_replace('qrscene','',$message['EventKey']);
+//                $ticket = $message['Ticket'];
+//
+                $user = $message['FromUserName'];
+
+                $text = new Text("请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=412\">免费领取纸巾</a>] <br/> scene=".$scene);
+
+                $this->app->customer_service->message($text)->to($user)->send();
+
+            }
+
+        },Message::EVENT);
 
         $syResponse = $this->app->server->serve();
 

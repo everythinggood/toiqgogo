@@ -8,7 +8,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-if(!file_exists(__DIR__.'/../cache/access_token')){
+/*if(!file_exists(__DIR__.'/../cache/access_token')){
     throw new Exception('access_token is not found!');
 }
 
@@ -31,6 +31,27 @@ $response = $client->request('POST','https://api.weixin.qq.com/cgi-bin/qrcode/cr
 ]);
 
 var_export($response->getBody()->getContents());
+
+*/
+
+$settings = require __DIR__ . '/../src/settings.php';
+$app = new \Slim\App($settings);
+
+// Set up dependencies
+require __DIR__ . '/../src/dependencies.php';
+
+/** @var \EasyWeChat\OfficialAccount\Application $wechatApp */
+$wechatApp = $app->getContainer()[\Contract\Container::NAME_WX_APP];
+
+$result = $wechatApp->qrcode->temporary('foo',6*24*3600);
+
+
+if($ticket = $result['ticket']){
+    $url = $wechatApp->qrcode->url($ticket);
+
+    echo $url;
+}
+
 
 /**
  * ticket 换取二维码图片
