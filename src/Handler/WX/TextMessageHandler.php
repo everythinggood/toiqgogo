@@ -23,7 +23,7 @@ class TextMessageHandler implements EventHandlerInterface
     {
         $content = $payload['Content'];
 
-        $text = new Text($content);
+        $text = new Text($content??"is null");
 
         return $text;
 
