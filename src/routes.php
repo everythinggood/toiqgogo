@@ -20,4 +20,6 @@ $app->group('/wx',function(){
 
    $this->get('/qrCode',\Wx\Action\QrCodeGeneratorAction::class);
 
+   $this->any('/main',\Wx\Action\WxMainAction::class);
+
 });

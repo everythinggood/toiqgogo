@@ -24,4 +24,6 @@ interface Container
 
     const NAME_HANDLER_PLANE = 'plane-handler';
 
+    const NAME_WX_APP = 'wx-app';
+
 }

@@ -37,7 +37,15 @@ $container[\Contract\Container::NAME_HANDLER_PLANE] = function ($c){
 };
 
 
+$container[\Contract\Container::NAME_WX_APP] = function (\Psr\Container\ContainerInterface $c){
 
+    $config = $c->get('setting')['wxConfig'];
+
+    $app = \EasyWeChat\Factory::officialAccount($config);
+
+    return $app;
+
+};
 
 
 

@@ -25,6 +25,19 @@ return [
             'appSecret' => $_ENV['appSecret'],
             'redirect-url' => $_ENV['redirect-url'],
             'machine-scan-url' => $_ENV['machine-scan-url']
+        ],
+
+        'wxConfig' => [
+            'app_id' => $_ENV['appId'],
+            'secret' => $_ENV['appSecret'],
+            'token' => $_ENV['token'],
+
+            'response_type' => 'array',
+
+            'log' => [
+                'level' => 'debug',
+                'file' => __DIR__.'/../logs/wechat.log',
+            ],
         ]
     ],
 ];
