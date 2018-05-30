@@ -1,146 +1,150 @@
-body{
-			border: none;
-			margin: 0;
-			padding: 0;
-		}
-		.main{
-			border: none;
-			margin: 0;
-			padding: 0;
-		}
+body {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
 
-		a{
-			border: none;
-		}
+.main {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
 
-		.header{
-			position: relative;
-			border: none;
-		}
+a {
+    border: none;
+}
 
-		img .second{
-			border: none;
-		}
+.header {
+    position: relative;
+    border: none;
+}
 
-		.header_logo{
-			position: absolute;
-			top: 0%;
-			left:18%;
-			width: 8%;
-		}
+img .second {
+    border: none;
+}
 
-		.nav_header{
-			position: absolute;
-			top: 10%;
-			left: 28%;
-			width: 50%;
-		}
+.header_logo {
+    position: absolute;
+    top: 0%;
+    left: 18%;
+    width: 8%;
+}
 
-		.nav_header a{
-			text-decoration: none;
-			font-family: PingFangSC-Medium;
-			font-size: 15px;
-			color: #FFFFFF;
-			opacity: 0.5;
-			margin-right: 3.1%;
-		}
+.nav_header {
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    width: 50%;
+}
 
-		.nav_header a:hover{
-			opacity: 1;
-			padding-bottom: 5px;
-			border-bottom: 2px solid #FFFFFF;
-		}
+.nav_header a {
+    text-decoration: none;
+    font-family: PingFangSC-Medium;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    /*opacity: 0.8;*/
+    margin-right: 3.1%;
+}
 
-		.nav_header .active{
-			opacity: 1;
-			padding-bottom: 5px;
-			border-bottom: 2px solid #FFFFFF;
-		}
+.nav_header a:hover {
+    opacity: 1;
+    padding-bottom: 5px;
+    color: #660066;
+    border-bottom: 2px solid #660066;
+}
 
-		.footer{
-			position: relative;
-			height: 228px;
-		}
+.nav_header .active {
+    opacity: 1;
+    padding-bottom: 5px;
+    color: #660066;
+    border-bottom: 2px solid #660066;
+}
 
-		.footer_logo{
-			position: absolute;
-			left:20%;
-			top: 11%;
-		}
+.footer {
+    position: relative;
+    height: 228px;
+}
 
-		.nav_footer{
-			position: absolute;
-			top: 18%;
-			left: 28%;
-			width: 50%;
-		}
+.footer_logo {
+    position: absolute;
+    left: 20%;
+    top: 11%;
+}
 
-		.nav_footer a{
-			text-decoration: none;
-			font-family: PingFangSC-Medium;
-			font-size: 15px;
-			color: #26074E;
-			margin-right: 3.1%;
-			font-weight: 600;
-		}
+.nav_footer {
+    position: absolute;
+    top: 18%;
+    left: 28%;
+    width: 50%;
+}
 
-		.nav_footer a:hover{
-			padding-bottom: 5px;
-			border-bottom: 2px solid #26074E;
-		}
+.nav_footer a {
+    text-decoration: none;
+    font-family: PingFangSC-Medium;
+    font-size: 15px;
+    color: #26074E;
+    margin-right: 3.1%;
+    font-weight: 600;
+}
 
-		.nav_footer .active{
-			padding-bottom: 5px;
-			border-bottom: 2px solid #26074E;
-		}
-		
-		ul{
-			padding: 0px;
-			margin: 0px;
-		}
+.nav_footer a:hover {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #26074E;
+}
 
-		ul li{
-			list-style: none;
-			padding:2px 0px;
-			margin: 0px;
-		}
+.nav_footer .active {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #26074E;
+}
 
-		.left_text_view{		
-			position: absolute;
-			left:28%;
-			top:45%;
-			width: 30%;
-			font-family: PingFangSC-Medium;
-			font-size: 12px;
-			font-weight: 600;
-		}
+ul {
+    padding: 0px;
+    margin: 0px;
+}
 
-		.left_text_view span{
-			font-size: 10px;
-			font-weight: normal;
-			opacity: 50;
-		}
+ul li {
+    list-style: none;
+    padding: 2px 0px;
+    margin: 0px;
+}
 
-		.right_text_view{
-			position: absolute;
-			left:55%;
-			top:45%;
-			width: 40%;
-			font-size: 12px;
-			font-weight: 600;
-		}
+.left_text_view {
+    position: absolute;
+    left: 28%;
+    top: 45%;
+    width: 30%;
+    font-family: PingFangSC-Medium;
+    font-size: 12px;
+    font-weight: 600;
+}
 
-		.right_text_view span{
-			font-size: 10px;
-			font-weight: normal;
-			opacity: 50;
-		}
+.left_text_view span {
+    font-size: 10px;
+    font-weight: normal;
+    opacity: 50;
+}
 
-		.IP_text{
-			position: absolute;
-			left: 28%;
-			top: 80%;
-			font-size: 8px;
-			font-weight: normal;
-			opacity: 50;
-		}
+.right_text_view {
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    width: 40%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.right_text_view span {
+    font-size: 10px;
+    font-weight: normal;
+    opacity: 50;
+}
+
+.IP_text {
+    position: absolute;
+    left: 28%;
+    top: 80%;
+    font-size: 8px;
+    font-weight: normal;
+    opacity: 50;
+}
