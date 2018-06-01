@@ -48,27 +48,30 @@
 
     <div class="header wow bounceInUp">
         <a href="#" name='first'></a>
-        <img src="/assets/first.jpg" alt="" class="first" width="100%">
+        <img src="/assets/first.png" alt="" class="first" width="100%">
 
         <img src="/assets/header_logo.png" alt="" class='header_logo'>
 
         <nav class="nav_header wow bounceInDown">
             <a href="#first" class="first active" rel="first" onclick="active(this)">首页</a>
-            <a href="#second" onclick="active(this)" rel="second" class="second">纸色·价值观</a>
-            <a href="#third" class="third" rel="third" onclick="active(this)">纸色·合作</a>
-            <a href="#fourth" class="five" rel="five" onclick="active(this)">纸色·广告投放</a>
-            <a href="#five" class="seven" rel="seven" onclick="active(this)">纸色·联系我们</a>
+            <a href="#second" onclick="active(this)" rel="second" class="second">价值观</a>
+            <a href="#third" class="third" rel="third" onclick="active(this)">商户合作</a>
+            <a href="#fourth" class="fourth" rel="fourth" onclick="active(this)">广告投放</a>
+            <a href="#five" class="five" rel=five"" onclick="active(this)">关于我们</a>
+            <a href="#six" class="six" rel="six" onclick="active(this)">联系我们</a>
         </nav>
     </div>
 
     <a href="#" name="second"></a>
-    <img src="/assets/second.jpg" alt="" class="second wow bounceInDown" width="100%">
+    <img src="/assets/second.png" alt="" class="second wow bounceInDown" width="100%">
     <a href="#" name="third"></a>
-    <img src="/assets/third.jpg" alt="" class="fourth wow bounceInDown" width="100%">
+    <img src="/assets/third.png" alt="" class="third wow bounceInDown" width="100%">
     <a href="#" name="fourth"></a>
-    <img src="/assets/fourth.jpg" alt="" class="five wow bounceInUp" width="100%">
+    <img src="/assets/fourth.png" alt="" class="fourth wow bounceInUp" width="100%">
     <a href="#" name="five"></a>
-    <img src="/assets/five.jpg" alt="" class="seven wow bounceInUp" width="100%">
+    <img src="/assets/five.png" alt="" class="five wow bounceInUp" width="100%">
+    <a href="#" name="six"></a>
+    <img src="/assets/six.png" alt="" class="six wow bounceInUp" width="100%">
 
     <div class="footer wow bounceInDown">
 
@@ -78,10 +81,11 @@
 
         <nav class="nav_footer wow bounceInUp">
             <a href="#first" class="first active" rel="first" onclick="active(this)">首页</a>
-            <a href="#second" onclick="active(this)" rel="second" class="second">纸色·价值观</a>
-            <a href="#third" class="third" rel="third" onclick="active(this)">纸色·合作</a>
-            <a href="#five" class="five" rel="five" onclick="active(this)">纸色·广告投放</a>
-            <a href="#seven" class="seven" rel="seven" onclick="active(this)">纸色·联系我们</a>
+            <a href="#second" onclick="active(this)" rel="second" class="second">价值观</a>
+            <a href="#third" class="third" rel="third" onclick="active(this)">商户合作</a>
+            <a href="#fourth" class="fourth" rel="fourth" onclick="active(this)">广告投放</a>
+            <a href="#five" class="five" rel="five" onclick="active(this)">关于我们</a>
+            <a href="#six" class="six" rel="six" onclick="active(this)">联系我们</a>
         </nav>
 
         <ul class="left_text_view wow slideInLeft">
@@ -91,6 +95,7 @@
         </ul>
 
         <ul class="right_text_view wow slideInRight">
+            <li>客服热线：<span>18027133575</span></li>
             <li>公司名称：<span>广州智谷科技有限责任公司</span></li>
             <li>工商登记号码：<span>563-81-00723</span></li>
         </ul>
@@ -116,7 +121,7 @@
 
         var locationHref = window.location.href;
 
-        var hrefArr = ['first','second','third','five','seven'];
+        var hrefArr = ['first','second','third','fourth','five','six'];
 
         $('.active').removeClass('active');
 
