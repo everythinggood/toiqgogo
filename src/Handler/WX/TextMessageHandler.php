@@ -34,17 +34,21 @@ class TextMessageHandler implements EventHandlerInterface
     {
         $receive = $payload['Content'];
 
-        foreach ($this->rule['extract'] as $extractPattern=>$content){
-            if($receive === $extractPattern){
-                return $content;
-            }
+        if(strpos($receive,'888') > -1){
+            return $this->rule['extract']['888'];
         }
 
-        foreach ($this->rule['blur'] as $blurPattern=>$content){
-            if(strpos($receive,$blurPattern) > -1){
-                return $content;
-            }
-        }
+//        foreach ($this->rule['extract'] as $extractPattern=>$content){
+//            if($receive === $extractPattern){
+//                return $content;
+//            }
+//        }
+//
+//        foreach ($this->rule['blur'] as $blurPattern=>$content){
+//            if(strpos($receive,$blurPattern) > -1){
+//                return $content;
+//            }
+//        }
 
         return '欢迎您!';
 
