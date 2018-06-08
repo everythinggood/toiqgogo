@@ -94,6 +94,8 @@ class FrontMainAction implements ActionInterface
 
         $userArr = $this->wxHandler->getUserInfo($accessToken,$openId);
 
+        if(count($userArr) < 0) throw new \Exception('can not get user info!');
+
         $user = EntityUtils::convertToUser($userArr);
 
         /** @var Response $response */

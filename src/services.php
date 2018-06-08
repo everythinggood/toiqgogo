@@ -8,6 +8,7 @@
  * @return \Service\BillService
  */
 
-$container[\Service\BillService::class] = function (\Slim\Container $container){
-    return new \Service\BillService($container);
+$container[\Service\BillService::class] = function (\Psr\Container\ContainerInterface $container){
+    $em = $container[\Doctrine\ORM\EntityManager::class];
+    return new \Service\BillService($em);
 };
