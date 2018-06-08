@@ -34,11 +34,11 @@ class TextMessageHandler implements EventHandlerInterface
     {
         $receive = $payload['Content'];
 
-        $text = new Text();
+        $text = new Text('true');
 
         foreach ($this->rule['extract'] as $extractPattern=>$content){
             if($receive === $extractPattern){
-                $text->set('content',$content);
+                $text->setAttribute('content',$content);
                 return $text;
             }
         }
