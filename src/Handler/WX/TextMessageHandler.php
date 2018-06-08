@@ -28,7 +28,7 @@ class TextMessageHandler implements EventHandlerInterface
 
     /**
      * @param null $payload
-     * @return Text | string
+     * @return Text | null
      */
     public function handle($payload = null)
     {
@@ -50,7 +50,6 @@ class TextMessageHandler implements EventHandlerInterface
             }
         }
 
-        return '';
     }
 
 
