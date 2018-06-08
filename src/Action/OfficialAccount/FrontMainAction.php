@@ -6,19 +6,25 @@
  * Time: 6:38 PM
  */
 
-namespace Wx\Action;
+namespace Action\OfficialAccount;
 
 
 use Action\ActionInterface;
 use Contract\Container;
+use EasyWeChat\Payment\Application;
 use Handler\EntityUtils;
-use Handler\PlaneHandler;
+use Handler\BackedHandler;
 use Handler\WxJsHandler;
+use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Service\BillService;
+use Service\WxPaymentService;
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Slim\Router;
+use Slim\Views\Twig;
 
 /**
  * Class WxScanInfoAction
@@ -27,16 +33,32 @@ use Slim\Http\Response;
  *
  * @package Wx\Action
  */
-class WxScanInfoAction implements ActionInterface
+class FrontMainAction implements ActionInterface
 {
     /**
      * @var WxJsHandler
      */
     private $wxHandler;
     /**
-     * @var PlaneHandler
+     * @var BackedHandler
      */
-    private $planeHandler;
+    private $backedHandler;
+    /**
+     * @var Twig
+     */
+    private $view;
+    /**
+     * @var Application
+     */
+    private $application;
+    /**
+     * @var BillService
+     */
+    private $billService;
+    /**
+     * @var Logger
+     */
+    private $logger;
 
     /**
      * ActionInterface constructor.
@@ -46,7 +68,11 @@ class WxScanInfoAction implements ActionInterface
     public function __construct(ContainerInterface $container)
     {
         $this->wxHandler = $container[Container::NAME_HANDLER_WX_JS];
-        $this->planeHandler = $container[Container::NAME_HANDLER_PLANE];
+        $this->backedHandler = $container[Container::NAME_HANDLER_BACKED];
+        $this->view = $container[Container::NAME_VIEW];
+        $this->application = $container[Container::NAME_WX_PAYMENT];
+        $this->billService = $container[BillService::class];
+        $this->logger = $container[Container::NAME_LOGGER];
     }
 
     /**
@@ -71,17 +97,16 @@ class WxScanInfoAction implements ActionInterface
         $user = EntityUtils::convertToUser($userArr);
 
         /** @var Response $response */
-        if($this->planeHandler->isFree($user)){
-            $adQrCode = $this->planeHandler->getAdQrCode($user,$state);
-            return $response->write(json_encode([
-                "is_free"=>true,
-                'adQrCode'=>$adQrCode
-            ]));
+        if($this->backedHandler->isFree($user)){
+            $adQrCode = $this->backedHandler->getAdQrCode($user,$state);
+            return $this->view->render($response,'/test/adCode.phtml',['adQrCode'=>$adQrCode]);
         }
 
-        return $response->write(json_encode([
-            'is_free'=>false
-        ]));
+        $wxPaymentService = new WxPaymentService($this->application,$this->billService,$this->logger);
+
+        $config = $wxPaymentService->getWxPaymentConfig($openId,0.01);
+
+        return $this->view->render($response,'/wx/payment.phtml',['config'=>$config]);
 
     }
 }

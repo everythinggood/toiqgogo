@@ -13,19 +13,19 @@ use Contract\Container;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Slim\Views\PhpRenderer;
+use Slim\Views\Twig;
 
 class FontMainViewAction implements ActionInterface
 {
     /**
-     * @var PhpRenderer
+     * @var Twig
      */
     private $view;
 
 
     public function __construct(ContainerInterface $container)
     {
-        $this->view = $container[Container::NAME_RENDERER];
+        $this->view = $container[Container::NAME_VIEW];
     }
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)

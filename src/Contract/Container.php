@@ -12,7 +12,7 @@ namespace Contract;
 interface Container
 {
 
-    const NAME_RENDERER = 'renderer';
+    const NAME_VIEW = 'view';
 
     const NAME_LOGGER = 'logger';
 
@@ -22,8 +22,12 @@ interface Container
 
     const NAME_HANDLER_WX_JS = 'wx-js-handler';
 
-    const NAME_HANDLER_PLANE = 'plane-handler';
+    const NAME_HANDLER_BACKED = 'backed-handler';
 
     const NAME_WX_APP = 'wx-app';
+
+    const NAME_WX_PAYMENT = 'wx-payment';
+
+    const NAME_JSON_VIEW = 'json-view';
 
 }

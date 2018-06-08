@@ -15,7 +15,7 @@ use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Http\Request;
-use Slim\Views\PhpRenderer;
+use Slim\Views\Twig;
 
 class TestWXAction implements ActionInterface
 {
@@ -24,13 +24,13 @@ class TestWXAction implements ActionInterface
      */
     private $logger;
     /**
-     * @var PhpRenderer
+     * @var Twig
      */
     private $view;
 
     public function __construct(ContainerInterface $container)
     {
-        $this->view = $container[Container::NAME_RENDERER];
+        $this->view = $container[Container::NAME_VIEW];
         $this->logger = $container[Container::NAME_LOGGER];
     }
 

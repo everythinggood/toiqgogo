@@ -4,10 +4,16 @@
 
 $container = $app->getContainer();
 
-// view renderer
-$container[\Contract\Container::NAME_RENDERER] = function (\Psr\Container\ContainerInterface $c) {
-    $settings = $c->get('settings')['renderer'];
-    return new Slim\Views\PhpRenderer($settings['template_path']);
+// view twig
+$container[\Contract\Container::NAME_VIEW] = function (\Psr\Container\ContainerInterface $c) {
+    $twigConfig = $c->get('settings')['twigConfig'];
+    $view = new \Slim\Views\Twig($twigConfig['template'],$twigConfig['options']);
+
+    $router = $c->get('router');
+    $url = \Slim\Http\Uri::createFromEnvironment(new \Slim\Http\Environment($_SERVER));
+    $view->addExtension(new \Slim\Views\TwigExtension($router,$url));
+
+    return $view;
 };
 
 // monolog
@@ -32,8 +38,8 @@ $container[\Contract\Container::NAME_HANDLER_WX_JS] = function ($c){
     return new \Handler\WxJsHandler($c);
 };
 
-$container[\Contract\Container::NAME_HANDLER_PLANE] = function ($c){
-    return new \Handler\PlaneHandler($c);
+$container[\Contract\Container::NAME_HANDLER_BACKED] = function ($c){
+    return new \Handler\BackedHandler($c);
 };
 
 
@@ -47,11 +53,40 @@ $container[\Contract\Container::NAME_WX_APP] = function (\Psr\Container\Containe
 
 };
 
+$container[\Contract\Container::NAME_WX_PAYMENT] = function (\Psr\Container\ContainerInterface $c){
 
+    $config = $c->get('setting')['wxPaymentConfig'];
 
+    $app = \EasyWeChat\Factory::payment($config);
 
+    return $app;
 
+};
 
+$container[\Doctrine\ORM\EntityManager::class] = function (\Slim\Container $container): \Doctrine\ORM\EntityManager {
+    $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(
+        $container['settings']['doctrine']['metadata_dirs'],
+        $container['settings']['doctrine']['dev_mode']
+    );
+
+    $config->setMetadataDriverImpl(
+        new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(
+            new \Doctrine\Common\Annotations\AnnotationReader(),
+            $container['settings']['doctrine']['metadata_dirs']
+        )
+    );
+
+    $config->setMetadataCacheImpl(
+        new \Doctrine\Common\Cache\FilesystemCache(
+            $container['settings']['doctrine']['cache_dir']
+        )
+    );
+
+    return \Doctrine\ORM\EntityManager::create(
+        $container['settings']['doctrine']['connection'],
+        $config
+    );
+};
 
 
 

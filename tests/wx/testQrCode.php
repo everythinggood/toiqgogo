@@ -10,6 +10,7 @@ require_once __DIR__.'/../../vendor/autoload.php';
 
 $qrCode = new \Endroid\QrCode\QrCode('http://www.baidu.com');
 
+
 echo $qrCode->getContentType();
 
 //$qrCode->writeFile(__DIR__.'/qrcode.jpg');

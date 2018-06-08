@@ -13,7 +13,7 @@ use GuzzleHttp\Client;
 use Handler\Entity\User;
 use Slim\Container;
 
-class PlaneHandler
+class BackedHandler
 {
     /**
      * @var Client
@@ -36,7 +36,7 @@ class PlaneHandler
 
     public function getAdQrCode(User $user,$machineCode){
 
-        $adQrCode = 'http://www.baidu.com';
+        $adQrCode = '/test/adCode.jpg';
 
         return $adQrCode;
     }

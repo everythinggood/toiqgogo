@@ -8,18 +8,23 @@ $app->get('/',\Action\FontMainViewAction::class);
 
 $app->get('/testwx',\Action\TestWXAction::class);
 
-$app->any('/wxSignature',\Action\WxSignATureAction::class);
-
-$app->map(['GET','POST'],'/wxScanPush',\Action\WxScanPushAction::class);
 
 $app->group('/wx',function(){
 
-   $this->get('/index',\Wx\Action\IndexAction::class);
+    $this->any('/bootstrap',\Action\OfficialAccount\BootstrapAction::class);
 
-   $this->get('/scanInfo',\Wx\Action\WxScanInfoAction::class);
+    $this->get('/index',\Action\OfficialAccount\IndexAction::class);
 
-   $this->get('/qrCode',\Wx\Action\QrCodeGeneratorAction::class);
+    $this->get('/qrCode',\Action\OfficialAccount\QrCodeGeneratorAction::class);
 
-   $this->any('/main',\Wx\Action\WxMainAction::class);
+    $this->any('/main',\Action\OfficialAccount\FrontMainAction::class);
+
+});
+
+$app->group('/test',function (){
+   $this->get('/adCode',\Action\Test\TestViewAction::class.":adCode");
+   $this->get('/offLine',\Action\Test\TestViewAction::class.":offLine");
+   $this->get('/fail',\Action\Test\TestViewAction::class.":fail");
+   $this->get('/success',\Action\Test\TestViewAction::class.":success");
 
 });

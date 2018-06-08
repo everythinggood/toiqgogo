@@ -2,28 +2,26 @@
 /**
  * Created by PhpStorm.
  * User: ycy
- * Date: 5/15/18
- * Time: 6:31 PM
+ * Date: 5/16/18
+ * Time: 12:05 PM
  */
 
-namespace Wx\Action;
+namespace Action\OfficialAccount;
 
 
 use Action\ActionInterface;
-use Contract\Container;
-use Handler\WxJsHandler;
+use Handler\QrCodeHandler;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Http\Request;
-use Slim\Http\Response;
 
-class IndexAction implements ActionInterface
+class QrCodeGeneratorAction implements ActionInterface
 {
     /**
-     * @var WxJsHandler
+     * @var QrCodeHandler
      */
-    private $wxHandler;
+    private $qrCodeHandler;
 
     /**
      * ActionInterface constructor.
@@ -32,7 +30,7 @@ class IndexAction implements ActionInterface
      */
     public function __construct(ContainerInterface $container)
     {
-        $this->wxHandler = $container[Container::NAME_HANDLER_WX_JS];
+        $this->qrCodeHandler = new QrCodeHandler($container);
     }
 
     /**
@@ -46,11 +44,17 @@ class IndexAction implements ActionInterface
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
         /** @var Request $request */
-        $state = $request->getParam('machineCode');
+        $machineCode = $request->getParam('machineCode');
 
-        if(!$state) throw new \Exception("require machineCode parameters");
+        if(!$machineCode) throw new \Exception("require machineCode parameter");
 
-        /** @var Response $response */
-        return $response->withRedirect($this->wxHandler->getSnsApiBaseUrl($state));
+        $qrCode = $this->qrCodeHandler->getQrCodeByMachineCode($machineCode);
+
+        $response = $response->withHeader("Content-type",$qrCode->getContentType());
+
+        $response->getBody()->write($qrCode->writeString());
+
+        return $response;
+
     }
 }
