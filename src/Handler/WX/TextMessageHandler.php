@@ -28,27 +28,25 @@ class TextMessageHandler implements EventHandlerInterface
 
     /**
      * @param null $payload
-     * @return Text | null
+     * @return string
      */
     public function handle($payload = null)
     {
         $receive = $payload['Content'];
 
-        $text = new Text('true');
-
         foreach ($this->rule['extract'] as $extractPattern=>$content){
             if($receive === $extractPattern){
-                $text->setAttribute('content',$content);
-                return $text;
+                return $content;
             }
         }
 
         foreach ($this->rule['blur'] as $blurPattern=>$content){
             if(strpos($receive,$blurPattern) > -1){
-                $text->setAttribute('content',$content);
-                return $text;
+                return $content;
             }
         }
+
+        return '欢迎您!';
 
     }
 
