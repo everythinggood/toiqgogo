@@ -41,7 +41,7 @@ class EventMessageHandler implements EventHandlerInterface
             $scene = str_replace('qrscene','',$message['EventKey']);
             $user = $message['FromUserName'];
 
-            $text = new Text(" <br/> scene=".$scene);
+            $text = new Text("请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=412\">免费领取纸巾</a>]");
 
             $this->app->customer_service->message($text)->to($user)->send();
 
