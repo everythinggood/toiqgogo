@@ -1,5 +1,6 @@
 .env
-/.idea/
+/.idea/*
 /vendor/
 /logs/*
+/cache/*
 !/logs/README.md
