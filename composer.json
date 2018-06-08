@@ -34,8 +34,8 @@
             "Action\\": "src/Action/",
             "Contract\\": "src/Contract/",
             "Handler\\": "src/Handler/",
-            "Domain\\": "src/Domain",
-            "Service\\": "src/Service"
+            "Domain\\": "src/Domain/",
+            "Service\\": "src/Service/"
         }
     },
     "config": {
