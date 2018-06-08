@@ -15,9 +15,11 @@ use EasyWeChat\Kernel\Messages\Message;
 use EasyWeChat\OfficialAccount\Application;
 use Handler\WX\EventMessageHandler;
 use Handler\WX\TextMessageHandler;
+use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Slim\Http\Request;
 use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
 
 class BootstrapAction implements ActionInterface
@@ -26,6 +28,10 @@ class BootstrapAction implements ActionInterface
      * @var Application
      */
     private $app;
+    /**
+     * @var Logger
+     */
+    private $logger;
 
     /**
      * ActionInterface constructor.
@@ -35,6 +41,7 @@ class BootstrapAction implements ActionInterface
     public function __construct(ContainerInterface $container)
     {
         $this->app = $container[Container::NAME_WX_APP];
+        $this->logger = $container[Container::NAME_LOGGER];
     }
 
     /**
@@ -46,9 +53,11 @@ class BootstrapAction implements ActionInterface
      */
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
+        /** @var Request $request */
+        $this->logger->addInfo('wx/bootstrap', $request->getParams());
 
-        $this->app->server->push(TextMessageHandler::class,Message::TEXT);
-        $this->app->server->push(EventMessageHandler::class,Message::EVENT);
+        $this->app->server->push(TextMessageHandler::class, Message::TEXT);
+        $this->app->server->push(EventMessageHandler::class, Message::EVENT);
 
         $syResponse = $this->app->server->serve();
 
