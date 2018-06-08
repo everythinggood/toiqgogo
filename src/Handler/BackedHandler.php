@@ -36,7 +36,7 @@ class BackedHandler
 
     public function getAdQrCode(User $user,$machineCode){
 
-        $adQrCode = '/test/adCode.jpg';
+        $adQrCode = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFL7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyeFBiU2NmanJkRWsxMGtLeTFyY1QAAgQURRpbAwQA6QcA';
 
         return $adQrCode;
     }
