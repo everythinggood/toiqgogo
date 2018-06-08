@@ -71,12 +71,12 @@ return [
 
             'connection' => [
                 'driver' => 'pdo_mysql',
-                'host' => 'mysql',
-                'port' => 3306,
-                'dbname' => 'wego',
-                'user' => 'root',
-                'password' => 'ycy',
-                'charset' => 'utf8'
+                'host' => $_ENV['host'],
+                'port' => $_ENV['port'],
+                'dbname' => $_ENV['dbname'],
+                'user' => $_ENV['user'],
+                'password' => $_ENV['password'],
+                'charset' => $_ENV['charset']
             ]
         ]
     ],
