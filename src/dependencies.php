@@ -88,6 +88,8 @@ $container[\Doctrine\ORM\EntityManager::class] = function (\Slim\Container $cont
     );
 };
 
+require __DIR__.'/services.php';
+
 
 
 
