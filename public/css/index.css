@@ -148,3 +148,14 @@ ul li {
     font-weight: normal;
     opacity: 50;
 }
+
+.header_tip{
+    position: absolute;
+    right: 1%;
+    top:80%;
+    color: white;
+}
+
+.header_tip p{
+    font-size: 10px;
+}
