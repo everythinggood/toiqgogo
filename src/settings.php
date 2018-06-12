@@ -36,6 +36,11 @@ return [
             'secret' => $_ENV['appSecret'],
             'token' => $_ENV['token'],
 
+            'oauth'=>[
+                'scopes'=>['snsapi_userinfo'],
+                'callback' => '/oauth_callback'
+            ],
+
             'response_type' => 'array',
 
             'log' => [

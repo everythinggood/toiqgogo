@@ -88,6 +88,10 @@ $container[\Doctrine\ORM\EntityManager::class] = function (\Slim\Container $cont
     );
 };
 
+$container[\Contract\Container::NAME_SESSION] = function (\Psr\Container\ContainerInterface $container){
+    return new \SlimSession\Helper();
+};
+
 require __DIR__.'/services.php';
 
 

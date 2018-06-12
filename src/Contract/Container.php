@@ -30,4 +30,6 @@ interface Container
 
     const NAME_JSON_VIEW = 'json-view';
 
+    const NAME_SESSION = 'session';
+
 }
