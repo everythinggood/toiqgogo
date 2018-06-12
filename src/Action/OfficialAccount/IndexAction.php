@@ -95,6 +95,9 @@ class IndexAction implements ActionInterface
         if(!$this->sHelper->exists(Session::NAME_USER_INFO)){
 
             $syResponse = $this->app->oauth->redirect();
+
+            $this->logger->addInfo("oauth redirect response if session is not exist",(array)$syResponse);
+
             $factory = new DiactorosFactory();
             return $factory->createResponse($syResponse);
         }
@@ -103,15 +106,20 @@ class IndexAction implements ActionInterface
 
         if(count($user) < 0) throw new \Exception('can not get user info!');
 
+        $this->logger->addInfo("oauth not need redirect if session is exist",$user);
+
         $user = EntityUtils::convertToUser($user);
 
         if($this->backHandler->isFree($user)){
             //根据机器码和用户 去后台服务拿公众号关注链接
 //            $url = $this->backHandler->getAdQrCode();
 
+            $this->logger->addInfo("this user is free today!",(array)$user);
             //关注链接生成
             return $response->withRedirect($this->wxHandler->getFollowUrl());
         }
+
+        $this->logger->addInfo("this user is not free today!",(array)$user);
 
         $wxPaymentService = new WxPaymentService($this->app,$this->billService,$this->logger);
 

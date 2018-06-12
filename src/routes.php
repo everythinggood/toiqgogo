@@ -19,6 +19,8 @@ $app->group('/wx',function(){
 
     $this->any('/main',\Action\OfficialAccount\FrontMainAction::class);
 
+    $this->any('/oauthCallback',\Action\OfficialAccount\OauthCallbackAction::class);
+
 });
 
 $app->group('/test',function (){

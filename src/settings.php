@@ -38,7 +38,7 @@ return [
 
             'oauth'=>[
                 'scopes'=>['snsapi_userinfo'],
-                'callback' => '/oauth_callback'
+                'callback' => '/wx/oauthCallback'
             ],
 
             'response_type' => 'array',

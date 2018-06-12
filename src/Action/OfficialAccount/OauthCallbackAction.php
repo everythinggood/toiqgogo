@@ -13,6 +13,7 @@ use Action\ActionInterface;
 use Contract\Container;
 use Contract\Session;
 use EasyWeChat\OfficialAccount\Application;
+use Monolog\Logger;
 use Overtrue\Socialite\User;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -37,6 +38,10 @@ class OauthCallbackAction implements ActionInterface
      * @var Router
      */
     private $router;
+    /**
+     * @var Logger
+     */
+    private $logger;
 
     /**
      * OauthCallbackAction constructor.
@@ -49,6 +54,7 @@ class OauthCallbackAction implements ActionInterface
         $this->app = $container[Container::NAME_WX_APP];
         $this->sHelper = $container[Container::NAME_SESSION];
         $this->router = $container->get('router');
+        $this->logger = $container[Container::NAME_LOGGER];
     }
 
     /**
@@ -69,7 +75,11 @@ class OauthCallbackAction implements ActionInterface
 
         if(!$user) throw new \Exception("oauth callback can not get user!");
 
+        $this->logger->addInfo("oauth callback set user info to session",$user->toArray());
+
         $this->sHelper->set(Session::NAME_USER_INFO,$user->toArray());
+
+        $this->logger->addInfo("oauth callback redirect to /wx/index on state param");
 
         /** @var Response $response */
         return $response->withRedirect($this->router->pathFor("wx_index",['state'=>$state]));
