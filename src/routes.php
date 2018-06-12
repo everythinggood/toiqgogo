@@ -13,7 +13,7 @@ $app->group('/wx',function(){
 
     $this->any('/bootstrap',\Action\OfficialAccount\BootstrapAction::class);
 
-    $this->get('/index',\Action\OfficialAccount\IndexAction::class)->setName('wx_index');
+    $this->any('/index',\Action\OfficialAccount\IndexAction::class)->setName('wx_index');
 
     $this->get('/qrCode',\Action\OfficialAccount\QrCodeGeneratorAction::class);
 
