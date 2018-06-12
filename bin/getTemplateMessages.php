@@ -37,7 +37,7 @@ try {
         ]
 
     ]);
-    echo $response;
+    var_export($response);
 } catch (\EasyWeChat\Kernel\Exceptions\InvalidArgumentException $e) {
     echo $e->getMessage();
 }
