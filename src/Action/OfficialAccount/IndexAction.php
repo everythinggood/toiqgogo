@@ -95,7 +95,7 @@ class IndexAction implements ActionInterface
         $user = $this->sHelper->get(Session::NAME_USER_INFO);
         $user = EntityUtils::convertSessionToUser($user);
 
-        if(!$this->sHelper->exists(Session::NAME_USER_INFO)||!$user['openid']){
+        if(!$this->sHelper->exists(Session::NAME_USER_INFO)||!$user->openid){
 
             $syResponse = $this->app->oauth->redirect();
 
@@ -107,8 +107,7 @@ class IndexAction implements ActionInterface
 
         if(count($user) < 0) throw new \Exception('can not get user info!');
 
-        $this->logger->addInfo("oauth not need redirect if session is exist",$user);
-
+        $this->logger->addInfo("oauth not need redirect if session is exist",(array)$user);
 
         if($this->backHandler->isFree($user)){
             //根据机器码和用户 去后台服务拿公众号关注链接
