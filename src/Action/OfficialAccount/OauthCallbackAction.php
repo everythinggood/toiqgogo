@@ -82,7 +82,8 @@ class OauthCallbackAction implements ActionInterface
         $this->logger->addInfo("oauth callback redirect to /wx/index on state param",$request->getParams());
 
         /** @var Response $response */
-        return $response->withRedirect($this->router->pathFor("wx_index",['machineCode'=>$state]));
+        $targetUrl = $this->router->pathFor("wx_index",null,['machineCode'=>$state]);
+        return $response->withRedirect($targetUrl);
 
     }
 }
