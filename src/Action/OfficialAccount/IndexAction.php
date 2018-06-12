@@ -92,7 +92,9 @@ class IndexAction implements ActionInterface
 
         if(!$machineCode) throw new \Exception("require machineCode parameter!");
 
-        if(!$this->sHelper->exists(Session::NAME_USER_INFO)){
+        $user = $this->sHelper->get(Session::NAME_USER_INFO);
+
+        if(!$this->sHelper->exists(Session::NAME_USER_INFO)||!$user['openid']){
 
             $syResponse = $this->app->oauth->redirect();
 
@@ -101,8 +103,6 @@ class IndexAction implements ActionInterface
             $factory = new DiactorosFactory();
             return $factory->createResponse($syResponse);
         }
-
-        $user = $this->sHelper->get(Session::NAME_USER_INFO);
 
         if(count($user) < 0) throw new \Exception('can not get user info!');
 

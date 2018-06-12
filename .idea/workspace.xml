@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="[dev]do EventMessageHandler">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/getTemplateMessages.php" />
+    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="[dev]add bin/getTemplateMessages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/FrontMainAction.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/getTemplateMessages.php" afterPath="$PROJECT_DIR$/bin/getTemplateMessages.php" />
       <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" afterPath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/Handler/EntityUtils.php" afterPath="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
-      <change beforePath="$PROJECT_DIR$/src/routes.php" afterPath="$PROJECT_DIR$/src/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,28 +63,28 @@
       <file leaf-file-name="IndexAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="41" />
+            <state relative-caret-position="198">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getTemplateMessages.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getTemplateMessages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -116,8 +113,8 @@
       <file leaf-file-name="EntityUtils.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="258">
+              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -165,13 +162,13 @@
         <option value="$PROJECT_DIR$/src/Action/TestWXAction.php" />
         <option value="$PROJECT_DIR$/src/Handler/BackedHandler.php" />
         <option value="$PROJECT_DIR$/src/settings.php" />
-        <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
         <option value="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
         <option value="$PROJECT_DIR$/src/Contract/Event.php" />
         <option value="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" />
         <option value="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
-        <option value="$PROJECT_DIR$/bin/getTemplateMessages.php" />
         <option value="$PROJECT_DIR$/src/routes.php" />
+        <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
+        <option value="$PROJECT_DIR$/bin/getTemplateMessages.php" />
       </list>
     </option>
   </component>
@@ -235,9 +232,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="245" />
-    <option name="y" value="27" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="173" />
+    <option name="y" value="49" />
     <option name="width" value="974" />
     <option name="height" value="555" />
   </component>
@@ -4942,13 +4939,6 @@
       <workItem from="1524821957888" duration="4837000" />
       <workItem from="1524845764598" duration="1700000" />
     </task>
-    <task id="LOCAL-00007" summary="test">
-      <created>1524797262438</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1524797262438</updated>
-    </task>
     <task id="LOCAL-00008" summary="test">
       <created>1524797452378</created>
       <option name="number" value="00008" />
@@ -5285,14 +5275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528815856453</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="[dev]add bin/getTemplateMessages">
+      <created>1528816963184</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1528816963184</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41013000" />
+    <option name="totallyTimeSpent" value="42344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="245" y="27" width="974" height="555" extended-state="0" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -5301,7 +5298,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48039216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29418105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2490024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5367,7 +5364,8 @@
     <MESSAGE value="[dev]add log on wx/index and wx/oauthCallback" />
     <MESSAGE value="[dev]fix oauthCallback on redirect url param name" />
     <MESSAGE value="[dev]do EventMessageHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="[dev]do EventMessageHandler" />
+    <MESSAGE value="[dev]add bin/getTemplateMessages" />
+    <option name="LAST_COMMIT_MESSAGE" value="[dev]add bin/getTemplateMessages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -5663,22 +5661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/getAccessToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -5695,18 +5677,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
+    <entry file="file://$PROJECT_DIR$/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.php">
+    <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
           <folding />
         </state>
       </provider>
