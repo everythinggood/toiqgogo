@@ -18,11 +18,11 @@ class TextMessageHandler implements EventHandlerInterface
     private $rule = [
         //模糊
         'blur'=>[
-            '888'=>"请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=412\">免费领取纸巾</a>]",
+            '888'=>"请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=1016\">【免费领取纸巾】</a>]",
         ],
         //精确匹配
         'extract'=>[
-            '888'=>"请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=412\">免费领取纸巾</a>]",
+            '888'=>"请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=1016\">【免费领取纸巾】</a>]",
         ]
     ];
 

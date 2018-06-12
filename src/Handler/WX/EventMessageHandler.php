@@ -46,7 +46,7 @@ class EventMessageHandler implements EventHandlerInterface
         if($message['Event'] == Event::SUBSCRIBE){
             $this->app->logger->addInfo("get subscribe event",$message);
             $this->sendPaperText($userOpenId);
-            $this->sendOneTemplateMessage($userOpenId);
+//            $this->sendOneTemplateMessage($userOpenId);
         }
         //扫描带参数二维码事件
         if(array_key_exists('Ticket',$message)){
@@ -55,7 +55,7 @@ class EventMessageHandler implements EventHandlerInterface
 
             $scene = str_replace('qrscene','',$message['EventKey']);
 
-            $this->sendPaperText($user);
+            $this->sendPaperText($userOpenId);
         }
 
     }
@@ -66,7 +66,7 @@ class EventMessageHandler implements EventHandlerInterface
      * @throws \EasyWeChat\Kernel\Exceptions\RuntimeException
      */
     private function sendPaperText($userOpenId){
-        $text = new Text("请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=412\">免费领取纸巾</a>]");
+        $text = new Text("请点击【<a href=\"http://m.zhiwei99.com/addon/YiKaTong/GuanzhuGzh/up?state=1016\">【免费领取纸巾】</a>]");
 
         $result = $this->app->customer_service->message($text)->to($userOpenId)->send();
 
@@ -75,6 +75,7 @@ class EventMessageHandler implements EventHandlerInterface
     }
 
     /**
+     * 待定 不能使用
      * @param $userOpenId
      * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyWeChat\Kernel\Exceptions\InvalidArgumentException
