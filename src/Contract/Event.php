@@ -12,6 +12,7 @@ namespace Contract;
 interface Event
 {
     const SUBSCRIBE = 'subscribe';
+    const UN_SUBSCRIBE = 'unsubscribe';
     const SCAN = 'SCAN';
     const LOCATION = 'LOCATION';
     const CLICK = 'CLICK';
