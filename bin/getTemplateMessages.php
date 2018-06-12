@@ -30,10 +30,12 @@ try {
         "template_id"=>'JbFJCqHCCnhZR93qJctfUbD--R_XjrdEarvXFXGXjeI',
         "url"=>'http://toiqgogo.com',
         "scene"=>100,
+        "title"=>"",
         "data"=>[
-            "title"=>['广州智谷科技有限公司'],
-            "content"=>['领取纸巾成功'],
-            "time"=>['2018-06-12']
+            "content"=>[
+                'value'=>'领取纸巾成功',
+                'color'=>'#4d4d4d'
+            ],
         ]
 
     ]);
