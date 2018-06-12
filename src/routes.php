@@ -17,8 +17,6 @@ $app->group('/wx',function(){
 
     $this->get('/qrCode',\Action\OfficialAccount\QrCodeGeneratorAction::class);
 
-    $this->any('/main',\Action\OfficialAccount\FrontMainAction::class);
-
     $this->any('/oauthCallback',\Action\OfficialAccount\OauthCallbackAction::class);
 
 });

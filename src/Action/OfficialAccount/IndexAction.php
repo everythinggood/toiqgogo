@@ -108,7 +108,7 @@ class IndexAction implements ActionInterface
 
         $this->logger->addInfo("oauth not need redirect if session is exist",$user);
 
-        $user = EntityUtils::convertToUser($user);
+        $user = EntityUtils::convertSessionToUser($user);
 
         if($this->backHandler->isFree($user)){
             //根据机器码和用户 去后台服务拿公众号关注链接

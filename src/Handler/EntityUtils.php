@@ -14,7 +14,7 @@ use Handler\Entity\User;
 class EntityUtils
 {
 
-    public static function convertToUser(array $arrUser){
+    public static function convertSessionToUser(array $arrUser){
         $user = new User();
         $user->city = $arrUser['city'];
         $user->country = $arrUser['country'];

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="">
+    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="[dev]do EventMessageHandler">
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/getTemplateMessages.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Contract/Event.php" afterPath="$PROJECT_DIR$/src/Contract/Event.php" />
-      <change beforePath="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" afterPath="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" />
+      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/FrontMainAction.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" afterPath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/Handler/EntityUtils.php" afterPath="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
+      <change beforePath="$PROJECT_DIR$/src/routes.php" afterPath="$PROJECT_DIR$/src/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,33 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OauthCallbackAction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding>
-                <element signature="e#122#149#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootstrapAction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/BootstrapAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventMessageHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventMessageHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="234">
+              <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
               <folding>
                 <element signature="e#110#129#0#PHP" expanded="true" />
               </folding>
@@ -82,41 +63,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/settings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IndexAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="127" column="69" lean-forward="true" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+            <state relative-caret-position="2">
+              <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QrCodeGeneratorAction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/QrCodeGeneratorAction.php">
+      <file leaf-file-name="getTemplateMessages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getAccessToken.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/getAccessToken.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getWxQRCode.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/getWxQRCode.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityUtils.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -164,11 +165,13 @@
         <option value="$PROJECT_DIR$/src/Action/TestWXAction.php" />
         <option value="$PROJECT_DIR$/src/Handler/BackedHandler.php" />
         <option value="$PROJECT_DIR$/src/settings.php" />
-        <option value="$PROJECT_DIR$/src/routes.php" />
         <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
         <option value="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
         <option value="$PROJECT_DIR$/src/Contract/Event.php" />
         <option value="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" />
+        <option value="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
+        <option value="$PROJECT_DIR$/bin/getTemplateMessages.php" />
+        <option value="$PROJECT_DIR$/src/routes.php" />
       </list>
     </option>
   </component>
@@ -232,11 +235,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1299" />
-    <option name="height" value="743" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="245" />
+    <option name="y" value="27" />
+    <option name="width" value="974" />
+    <option name="height" value="555" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -260,6 +263,11 @@
             <path>
               <item name="toiqgogo" type="b2602c69:ProjectViewProjectNode" />
               <item name="toiqgogo" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="toiqgogo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toiqgogo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="toiqgogo" type="b2602c69:ProjectViewProjectNode" />
@@ -4934,13 +4942,6 @@
       <workItem from="1524821957888" duration="4837000" />
       <workItem from="1524845764598" duration="1700000" />
     </task>
-    <task id="LOCAL-00006" summary="test">
-      <created>1524796601885</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1524796601885</updated>
-    </task>
     <task id="LOCAL-00007" summary="test">
       <created>1524797262438</created>
       <option name="number" value="00007" />
@@ -5277,14 +5278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528814634398</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="[dev]do EventMessageHandler">
+      <created>1528815856453</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1528815856453</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39887000" />
+    <option name="totallyTimeSpent" value="41013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-2" width="1299" height="743" extended-state="6" />
+    <frame x="245" y="27" width="974" height="555" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -5293,7 +5301,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48039216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21787709" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29418105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5358,21 +5366,14 @@
     <MESSAGE value="fix" />
     <MESSAGE value="[dev]add log on wx/index and wx/oauthCallback" />
     <MESSAGE value="[dev]fix oauthCallback on redirect url param name" />
-    <option name="LAST_COMMIT_MESSAGE" value="[dev]fix oauthCallback on redirect url param name" />
+    <MESSAGE value="[dev]do EventMessageHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="[dev]do EventMessageHandler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="29" column="118" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/WxScanPushAction.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/libxml/libxml.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3798">
@@ -5478,14 +5479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/getWxQRCode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/WxScanPushAction.php" />
     <entry file="file://$PROJECT_DIR$/bin/test.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -5499,13 +5492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/getAccessToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -5625,22 +5611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="127" column="69" lean-forward="true" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -5685,11 +5655,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="234">
+          <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
           <folding>
             <element signature="e#110#129#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/getAccessToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/getWxQRCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
