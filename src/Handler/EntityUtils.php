@@ -16,6 +16,7 @@ class EntityUtils
 
     public static function convertSessionToUser(array $arrUser){
         $user = new User();
+        $arrUser = $arrUser['original'];
         $user->city = $arrUser['city'];
         $user->country = $arrUser['country'];
         $user->headimgurl = $arrUser['headimgurl'];

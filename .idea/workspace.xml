@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" afterPath="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" afterPath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
+      <change beforePath="$PROJECT_DIR$/src/Handler/EntityUtils.php" afterPath="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +21,18 @@
       <file leaf-file-name="IndexAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="90" column="54" lean-forward="false" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="54" />
+            <state relative-caret-position="186">
+              <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityUtils.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -50,21 +61,31 @@
       <file leaf-file-name="AbstractProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/overtrue/socialite/src/Providers/AbstractProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="167" column="41" lean-forward="false" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="41" />
+            <state relative-caret-position="330">
+              <caret line="193" column="46" lean-forward="true" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OauthCallbackAction.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OauthCallbackAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+            <state relative-caret-position="488">
+              <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
               <folding>
                 <element signature="e#122#149#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/bryanjhv/slim-session/src/SlimSession/Helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,16 +95,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
               <caret line="424" column="20" lean-forward="false" selection-start-line="424" selection-start-column="20" selection-end-line="424" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootstrapAction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/BootstrapAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="59" column="40" lean-forward="false" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -106,16 +117,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146">
               <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getAccessToken.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/getAccessToken.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,12 +165,12 @@
         <option value="$PROJECT_DIR$/src/Handler/BackedHandler.php" />
         <option value="$PROJECT_DIR$/src/settings.php" />
         <option value="$PROJECT_DIR$/src/Contract/Event.php" />
-        <option value="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
-        <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
         <option value="$PROJECT_DIR$/bin/getTemplateMessages.php" />
         <option value="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" />
         <option value="$PROJECT_DIR$/src/routes.php" />
         <option value="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
+        <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
+        <option value="$PROJECT_DIR$/src/Handler/EntityUtils.php" />
       </list>
     </option>
   </component>
@@ -4940,13 +4941,6 @@
       <workItem from="1524821957888" duration="4837000" />
       <workItem from="1524845764598" duration="1700000" />
     </task>
-    <task id="LOCAL-00014" summary="test">
-      <created>1524799277059</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1524799277059</updated>
-    </task>
     <task id="LOCAL-00015" summary="test">
       <created>1524800436059</created>
       <option name="number" value="00015" />
@@ -5283,11 +5277,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528820554208</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="[dev]fix">
+      <created>1528820729917</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1528820729917</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44798000" />
+    <option name="totallyTimeSpent" value="45251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -5377,13 +5378,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/middleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Contract/Container.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -5607,14 +5601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/overtrue/wechat/src/OfficialAccount/TemplateMessage/Client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -5673,14 +5659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/overtrue/socialite/src/Providers/AbstractProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="167" column="41" lean-forward="false" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/QrCodeGeneratorAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -5697,14 +5675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="90" column="54" lean-forward="false" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/Router.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -5713,13 +5683,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/overtrue/socialite/src/Providers/AbstractProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="193" column="46" lean-forward="true" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bryanjhv/slim-session/src/SlimSession/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+        <state relative-caret-position="488">
+          <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
           <folding>
             <element signature="e#122#149#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handler/EntityUtils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
