@@ -95,6 +95,7 @@ class IndexAction implements ActionInterface
         $user = $this->sHelper->get(Session::NAME_USER_INFO);
         $user = EntityUtils::convertSessionToUser($user);
 
+        //用户授权跳转
         if(!$this->sHelper->exists(Session::NAME_USER_INFO)||!$user->openid){
 
             $syResponse = $this->app->oauth->redirect();
@@ -105,6 +106,7 @@ class IndexAction implements ActionInterface
             return $factory->createResponse($syResponse);
         }
 
+        //用户在会话中
         if(count($user) < 0) throw new \Exception('can not get user info!');
 
         $this->logger->addInfo("oauth not need redirect if session is exist",(array)$user);

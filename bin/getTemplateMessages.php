@@ -23,7 +23,7 @@ var_export($wxApp->template_message->getIndustry());
 echo "所有的模板列表：".PHP_EOL;
 var_export($wxApp->template_message->getPrivateTemplates());
 
-echo "发送一次性订阅消息：".PHP_EOL;
+/*echo "发送一次性订阅消息：".PHP_EOL;
 try {
     $response = $wxApp->template_message->sendSubscription([
         "touser" => 'o0xto1NmaRm3ESdgiAiA0NaNg3WM',
@@ -42,7 +42,7 @@ try {
     var_export($response);
 } catch (\EasyWeChat\Kernel\Exceptions\InvalidArgumentException $e) {
     echo $e->getMessage();
-}
+}*/
 
 echo "发送模板消息: ".PHP_EOL;
 

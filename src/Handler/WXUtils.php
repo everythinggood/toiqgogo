@@ -9,6 +9,8 @@
 namespace Handler;
 
 
+use Contract\WxErrorCode;
+
 class WXUtils
 {
 
@@ -91,6 +93,13 @@ class WXUtils
         //签名步骤四：所有字符转为大写
         $result = strtoupper($string);
         return $result;
+    }
+
+    public static function checkResponseIsOk(array $response){
+        if($response['errCode'] === WxErrorCode::IS_OK){
+            return true;
+        }
+        return false;
     }
 
 
