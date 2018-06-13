@@ -16,10 +16,18 @@ class ReceivePaperTemplateMessageInterFace implements TemplateMessageInterFace
     /**
      * @var array
      */
-    public $data;
-    public $url = null;
-    public $template_id = TemplateMessage::RECEIVE_PAPER;
+    private $data;
+    private $url = null;
+    private $template_id = TemplateMessage::RECEIVE_PAPER;
 
+    private $touser;
+
+    /**
+     * @param $touser
+     */
+    public function setTouser($touser){
+        $this->touser = $touser;
+    }
 
     public function setTitleField($content, $color = null)
     {
@@ -83,6 +91,7 @@ class ReceivePaperTemplateMessageInterFace implements TemplateMessageInterFace
     public function toArray()
     {
         return [
+            'touser'=>$this->touser,
             'template_id'=>$this->template_id,
             'url' => $this->url,
             'data' => $this->data

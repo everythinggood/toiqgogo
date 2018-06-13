@@ -11,9 +11,11 @@ namespace Handler\Entity;
 
 interface TemplateMessageInterFace
 {
+
     /**
      * @return array
      */
     public function toArray();
+    public function setTouser($touser);
 
 }

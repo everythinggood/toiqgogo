@@ -33,10 +33,8 @@ class TemplateMessageHandler
      */
     public function handle($touser, TemplateMessageInterFace $templateMessage)
     {
-
+        $templateMessage->setTouser($touser);
         $data = $templateMessage->toArray();
-        array_push($data,['touser'=>$touser]);
-
         var_export($data);
 
         $response = $this->app->template_message->send($data);
