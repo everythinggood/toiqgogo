@@ -121,6 +121,7 @@ class IndexAction implements ActionInterface
 //            $url = $this->backHandler->getAdQrCode();
 
             $this->logger->addInfo("this user is free today!",(array)$user);
+            $this->sHelper->delete(Session::NAME_USER_INFO);
             //关注链接生成
             return $response->withRedirect($this->wxHandler->getFollowUrl());
         }
