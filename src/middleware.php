@@ -6,5 +6,5 @@
 $app->add(new \Slim\Middleware\Session([
     'name' => 'toiqgogo_session',
     'autorefresh' => true,
-    'lifetime' => '1 hour'
+    'lifetime' => '1 minutes'
 ]));
