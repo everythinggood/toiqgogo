@@ -74,20 +74,17 @@ class OauthCallbackAction implements ActionInterface
 
         $user = null;
 
-        if(!$this->sHelper->exists(Session::NAME_USER_INFO)){
+        /** @var User $user */
+        $user = $this->app->oauth->user();
 
-            /** @var User $user */
-            $user = $this->app->oauth->user();
-        }
+        if (!$user) throw new \Exception("oauth callback can not get user!");
 
-        if(!$user) throw new \Exception("oauth callback can not get user!");
+        $this->logger->addInfo("oauth callback set user info to session", $user->toArray());
 
-        $this->logger->addInfo("oauth callback set user info to session",$user->toArray());
-
-        $this->sHelper->set(Session::NAME_USER_INFO,$user->toArray());
+        $this->sHelper->set(Session::NAME_USER_INFO, $user->toArray());
 
         /** @var Response $response */
-        $targetUrl = $this->router->pathFor("wx_index",null,['machineCode'=>$state]);
+        $targetUrl = $this->router->pathFor("wx_index", null, ['machineCode' => $state]);
         $this->logger->addInfo("oauth callback redirect to $targetUrl");
         return $response->withRedirect($targetUrl);
 

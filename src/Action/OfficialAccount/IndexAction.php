@@ -99,8 +99,8 @@ class IndexAction implements ActionInterface
 
         $this->logger->addInfo("wx/index session user info array",(array)$user);
 
-        //用户授权跳转
-        if(!$user||!$user['id']){
+        //未登陆
+        if(empty($user)){
 
             $syResponse = $this->app->oauth->redirect();
 
@@ -110,7 +110,7 @@ class IndexAction implements ActionInterface
             return $factory->createResponse($syResponse);
         }
 
-        //用户在会话中
+        //已登陆
         if(count($user) < 0) throw new \Exception('can not get user info!');
         $user = EntityUtils::convertSessionToUser($user);
 
@@ -121,7 +121,6 @@ class IndexAction implements ActionInterface
 //            $url = $this->backHandler->getAdQrCode();
 
             $this->logger->addInfo("this user is free today!",(array)$user);
-            $this->sHelper->delete(Session::NAME_USER_INFO);
             //关注链接生成
             return $response->withRedirect($this->wxHandler->getFollowUrl());
         }
