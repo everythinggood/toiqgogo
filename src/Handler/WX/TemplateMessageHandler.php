@@ -34,7 +34,8 @@ class TemplateMessageHandler
     public function handle($touser, TemplateMessageInterFace $templateMessage)
     {
 
-        $data = array_push($templateMessage->toArray(),['touser'=>$touser]);
+        $data = $templateMessage->toArray();
+        array_push($data,['touser'=>$touser]);
 
         $response = $this->app->template_message->send($data);
 
