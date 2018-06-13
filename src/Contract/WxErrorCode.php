@@ -11,6 +11,6 @@ namespace Contract;
 
 interface WxErrorCode
 {
-    const IS_OK = '0';
-    const USER_REFUSE_TO_ACCEPT = '43101';
+    const IS_OK = 0;
+    const USER_REFUSE_TO_ACCEPT = 43101;
 }
