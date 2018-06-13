@@ -85,6 +85,9 @@ class IndexAction implements ActionInterface
      */
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
+
+        $this->logger->addInfo('/wx/index');
+
         /** @var Request $request */
         /** @var Response $response */
 

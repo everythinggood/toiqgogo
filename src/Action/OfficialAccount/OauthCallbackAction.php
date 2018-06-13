@@ -67,6 +67,8 @@ class OauthCallbackAction implements ActionInterface
      */
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
+        $this->logger->addInfo("/wx/oauthCallback");
+
         /** @var Request $request */
         $state = $request->getParam('state');
 
