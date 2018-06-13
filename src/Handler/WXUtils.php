@@ -96,7 +96,7 @@ class WXUtils
     }
 
     public static function checkResponseIsOk(array $response){
-        if($response['errCode'] === WxErrorCode::IS_OK){
+        if($response['errcode'] === WxErrorCode::IS_OK){
             return true;
         }
         return false;
