@@ -72,8 +72,13 @@ class OauthCallbackAction implements ActionInterface
         /** @var Request $request */
         $state = $request->getParam('state');
 
-        /** @var User $user */
-        $user = $this->app->oauth->user();
+        $user = null;
+
+        if(!$this->sHelper->exists(Session::NAME_USER_INFO)){
+
+            /** @var User $user */
+            $user = $this->app->oauth->user();
+        }
 
         if(!$user) throw new \Exception("oauth callback can not get user!");
 

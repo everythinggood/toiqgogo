@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/clearSession.php" afterPath="$PROJECT_DIR$/bin/clearSession.php" />
+      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" afterPath="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OauthCallbackAction.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OauthCallbackAction.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+            <state relative-caret-position="53">
+              <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -91,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clearSession.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clearSession.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/clearSession.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -180,9 +180,9 @@
         <option value="$PROJECT_DIR$/bin/console.php" />
         <option value="$PROJECT_DIR$/src/Contract/WxErrorCode.php" />
         <option value="$PROJECT_DIR$/src/Handler/WXUtils.php" />
-        <option value="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
         <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
         <option value="$PROJECT_DIR$/bin/clearSession.php" />
+        <option value="$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php" />
       </list>
     </option>
   </component>
@@ -436,14 +436,7 @@
       <workItem from="1524821957888" duration="4837000" />
       <workItem from="1524845764598" duration="1700000" />
       <workItem from="1528881051647" duration="1401000" />
-      <workItem from="1528858177982" duration="11420000" />
-    </task>
-    <task id="LOCAL-00037" summary="test">
-      <created>1524814147626</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1524814147626</updated>
+      <workItem from="1528858177982" duration="11701000" />
     </task>
     <task id="LOCAL-00038" summary="test">
       <created>1524814395904</created>
@@ -781,11 +774,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528878457603</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="[test]">
+      <created>1528878689634</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1528878689634</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59226000" />
+    <option name="totallyTimeSpent" value="59507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -1203,14 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1231,6 +1223,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
           <folding />
         </state>
       </provider>
