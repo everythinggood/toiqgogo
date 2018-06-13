@@ -32,8 +32,8 @@
       <file leaf-file-name="getTemplateMessages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="60" column="52" lean-forward="false" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+            <state relative-caret-position="92">
+              <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -337,14 +337,7 @@
       <workItem from="1524821957888" duration="4837000" />
       <workItem from="1524845764598" duration="1700000" />
       <workItem from="1528881051647" duration="1401000" />
-      <workItem from="1528858177982" duration="849000" />
-    </task>
-    <task id="LOCAL-00018" summary="test">
-      <created>1524806632240</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1524806632240</updated>
+      <workItem from="1528858177982" duration="969000" />
     </task>
     <task id="LOCAL-00019" summary="test">
       <created>1524806760030</created>
@@ -682,11 +675,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528825136105</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="[dev]test template message">
+      <created>1528859038429</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1528859038430</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48655000" />
+    <option name="totallyTimeSpent" value="48775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -756,7 +756,8 @@
     <MESSAGE value="[dev]fix getTemplateMessages" />
     <MESSAGE value="[dev]fix EventMessageHandler add sendOneTemplateMessage" />
     <MESSAGE value="[dev]fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[dev]fix" />
+    <MESSAGE value="[dev]test template message" />
+    <option name="LAST_COMMIT_MESSAGE" value="[dev]test template message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1081,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="60" column="52" lean-forward="false" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+        <state relative-caret-position="92">
+          <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
           <folding />
         </state>
       </provider>

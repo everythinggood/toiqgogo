@@ -49,7 +49,7 @@ echo "发送模板消息: ".PHP_EOL;
 try {
     $response = $wxApp->template_message->send([
         'touser'=>'o0xto1NmaRm3ESdgiAiA0NaNg3WM',
-        "template_id" => 'TM202341498',
+        "template_id" => '5Hcc1qhVjCmHS96_bMWmvLmZkR4q7tZTFPdsgk0HB_4',
         'data'=>[
             'first'=>[
                 'DATA'=>'纸巾已经到达出纸巾口，请注意查看！'
