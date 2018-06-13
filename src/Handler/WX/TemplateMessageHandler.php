@@ -37,6 +37,8 @@ class TemplateMessageHandler
         $data = $templateMessage->toArray();
         array_push($data,['touser'=>$touser]);
 
+        var_export($data);
+
         $response = $this->app->template_message->send($data);
 
         var_export($response);
