@@ -39,7 +39,11 @@ class TemplateMessageHandler
 
         $response = $this->app->template_message->send($data);
 
+        var_export($response);
+
         if(is_array($response)){
+
+            echo "is array";
 
             return WXUtils::checkResponseIsOk($response);
         }
