@@ -52,16 +52,17 @@ try {
         "template_id" => '5Hcc1qhVjCmHS96_bMWmvLmZkR4q7tZTFPdsgk0HB_4',
         'data'=>[
             'first'=>[
-                'DATA'=>'纸巾已经到达出纸巾口，请注意查看！'
+                'value'=>'纸巾已经到达出纸巾口，请注意查看！',
+                'color'=>'#6A5ACD'
             ],
             'keyword1'=>[
-                'DATA'=>'维达纸巾一包',
+                'value'=>'维达纸巾一包',
             ],
             'keyword2'=>[
-                'DATA'=>(new DateTime())->format('Y-m-d H:i:s')
+                'value'=>(new DateTime())->format('Y-m-d H:i:s')
             ],
             'remark'=>[
-                'DATA'=>'如纸巾有问题或没有领取到，请电话联系400-001-222'
+                'value'=>'如纸巾有问题或没有领取到，请电话联系400-001-222'
             ]
         ]
     ]);
