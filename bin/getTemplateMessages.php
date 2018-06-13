@@ -52,7 +52,7 @@ try {
         "template_id" => '5Hcc1qhVjCmHS96_bMWmvLmZkR4q7tZTFPdsgk0HB_4',
         'data'=>[
             'first'=>[
-                'value'=>'纸巾已经到达出纸巾口，请注意查看！',
+                'value'=>'纸巾已经到达出纸巾口，请注意查看！(测试)',
                 'color'=>'#6A5ACD'
             ],
             'keyword1'=>[
