@@ -94,6 +94,8 @@ class IndexAction implements ActionInterface
 
         $user = $this->sHelper->get(Session::NAME_USER_INFO);
 
+        $this->logger->addInfo("wx/index session user info array",$user);
+
         //用户授权跳转
         if(!$this->sHelper->exists(Session::NAME_USER_INFO)||!$user['id']){
 
