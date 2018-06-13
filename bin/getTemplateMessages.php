@@ -46,27 +46,35 @@ try {
 
 echo "发送模板消息: ".PHP_EOL;
 
-try {
-    $response = $wxApp->template_message->send([
-        'touser'=>'o0xto1NmaRm3ESdgiAiA0NaNg3WM',
-        "template_id" => '5Hcc1qhVjCmHS96_bMWmvLmZkR4q7tZTFPdsgk0HB_4',
-        'data'=>[
-            'first'=>[
-                'value'=>'纸巾已经到达出纸巾口，请注意查看！(测试)',
-                'color'=>'#6A5ACD'
-            ],
-            'keyword1'=>[
-                'value'=>'维达纸巾一包',
-            ],
-            'keyword2'=>[
-                'value'=>(new DateTime())->format('Y-m-d H:i:s')
-            ],
-            'remark'=>[
-                'value'=>'如纸巾有问题或没有领取到，请电话联系400-001-222'
-            ]
-        ]
-    ]);
+$handler = new \Handler\WX\TemplateMessageHandler();
+$handler->setApplication($wxApp);
+$receivePaperMessage = new \Handler\Entity\ReceivePaperTemplateMessageInterFace();
+$receivePaperMessage->setTitleField("纸巾已经到达出纸巾口，请注意查看！");
+$receivePaperMessage->setProductField("维达纸巾一包");
+$receivePaperMessage->setTimeField();
+$receivePaperMessage->setRemarkField("如纸巾有问题或没有领取到，请电话联系400-001-222");
 
+try {
+//    $response = $wxApp->template_message->send([
+//        'touser'=>'o0xto1NmaRm3ESdgiAiA0NaNg3WM',
+//        "template_id" => '5Hcc1qhVjCmHS96_bMWmvLmZkR4q7tZTFPdsgk0HB_4',
+//        'data'=>[
+//            'first'=>[
+//                'value'=>'纸巾已经到达出纸巾口，请注意查看！(测试)',
+//                'color'=>'#6A5ACD'
+//            ],
+//            'keyword1'=>[
+//                'value'=>'维达纸巾一包',
+//            ],
+//            'keyword2'=>[
+//                'value'=>(new DateTime())->format('Y-m-d H:i:s')
+//            ],
+//            'remark'=>[
+//                'value'=>'如纸巾有问题或没有领取到，请电话联系400-001-222'
+//            ]
+//        ]
+//    ]);
+    $response = $handler->handle('o0xto1NmaRm3ESdgiAiA0NaNg3WM',$receivePaperMessage);
     var_export($response);
 } catch (\EasyWeChat\Kernel\Exceptions\InvalidArgumentException $e) {
 }

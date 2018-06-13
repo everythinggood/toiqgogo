@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="[dev]eventMessageHandler add send TemplateMessage function">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Contract/TemplateMessage.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Contract/WxErrorCode.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Handler/Entity/ReceivePaperTemplateMessageInterFace.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Handler/Entity/TemplateMessageInterFace.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Handler/WX/TemplateMessageHandler.php" />
+    <list default="true" id="49d2bad2-e76e-43fd-a940-0340591554fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/getTemplateMessages.php" afterPath="$PROJECT_DIR$/bin/getTemplateMessages.php" />
-      <change beforePath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" afterPath="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
-      <change beforePath="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" afterPath="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" />
-      <change beforePath="$PROJECT_DIR$/src/Handler/WXUtils.php" afterPath="$PROJECT_DIR$/src/Handler/WXUtils.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventMessageHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventMessageHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="41" />
               <folding>
                 <element signature="e#110#129#0#PHP" expanded="true" />
               </folding>
@@ -37,11 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getTemplateMessages.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OauthCallbackAction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getTemplateMessages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="524">
+              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -62,8 +64,8 @@
       <file leaf-file-name="IndexAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="119" column="42" lean-forward="false" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="42" />
+            <state relative-caret-position="348">
+              <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -104,16 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
               <caret line="102" column="27" lean-forward="false" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HasHttpRequests.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/overtrue/wechat/src/Kernel/Traits/HasHttpRequests.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="137" column="20" lean-forward="false" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -181,13 +173,13 @@
         <option value="$PROJECT_DIR$/src/Handler/Entity/ReceivePaperTemplateMessage.php" />
         <option value="$PROJECT_DIR$/src/Handler/Entity/TemplateMessage.php" />
         <option value="$PROJECT_DIR$/src/Handler/Entity/TemplateMessageInterFace.php" />
-        <option value="$PROJECT_DIR$/bin/getTemplateMessages.php" />
         <option value="$PROJECT_DIR$/src/Contract/WxErrorCode.php" />
         <option value="$PROJECT_DIR$/src/Handler/WXUtils.php" />
         <option value="$PROJECT_DIR$/src/Handler/WX/TemplateMessageHandler.php" />
         <option value="$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php" />
         <option value="$PROJECT_DIR$/src/Handler/Entity/ReceivePaperTemplateMessageInterFace.php" />
         <option value="$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php" />
+        <option value="$PROJECT_DIR$/bin/getTemplateMessages.php" />
       </list>
     </option>
   </component>
@@ -436,14 +428,7 @@
       <workItem from="1524821957888" duration="4837000" />
       <workItem from="1524845764598" duration="1700000" />
       <workItem from="1528881051647" duration="1401000" />
-      <workItem from="1528858177982" duration="6490000" />
-    </task>
-    <task id="LOCAL-00022" summary="test">
-      <created>1524807275212</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1524807275212</updated>
+      <workItem from="1528858177982" duration="7630000" />
     </task>
     <task id="LOCAL-00023" summary="fix routes on get and post">
       <created>1524807847217</created>
@@ -781,18 +766,25 @@
       <option name="project" value="LOCAL" />
       <updated>1528859392244</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="[dev]eventMessageHandler add send TemplateMessage function">
+      <created>1528873756978</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1528873756978</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54296000" />
+    <option name="totallyTimeSpent" value="55436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48039216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1088,13 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Handler/WX/TextMessageHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1175,14 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="119" column="42" lean-forward="false" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Handler/Entity/ReceivePaperTemplateMessageInterFace.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1191,11 +1168,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
+    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/OauthCallbackAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="488">
+          <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action/OfficialAccount/IndexAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="41" />
+          <folding>
+            <element signature="e#110#129#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1209,13 +1204,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Handler/WX/EventMessageHandler.php">
+    <entry file="file://$PROJECT_DIR$/bin/getTemplateMessages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#110#129#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="524">
+          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
