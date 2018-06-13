@@ -72,7 +72,12 @@ class OauthCallbackAction implements ActionInterface
         /** @var Request $request */
         $state = $request->getParam('state');
 
-        $user = null;
+        if(!empty($this->sHelper->get(Session::NAME_USER_INFO))){
+            /** @var Response $response */
+            $targetUrl = $this->router->pathFor("wx_index", null, ['machineCode' => $state]);
+            $this->logger->addInfo("oauth callback redirect to $targetUrl");
+            return $response->withRedirect($targetUrl);
+        }
 
         /** @var User $user */
         $user = $this->app->oauth->user();
