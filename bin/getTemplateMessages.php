@@ -44,5 +44,31 @@ try {
     echo $e->getMessage();
 }
 
+echo "发送模板消息: ".PHP_EOL;
+
+try {
+    $response = $wxApp->template_message->send([
+        'touser'=>'o0xto1NmaRm3ESdgiAiA0NaNg3WM',
+        "template_id" => 'TM202341498',
+        'data'=>[
+            'first'=>[
+                'DATA'=>'纸巾已经到达出纸巾口，请注意查看！'
+            ],
+            'keyword1'=>[
+                'DATA'=>'维达纸巾一包',
+            ],
+            'keyword2'=>[
+                'DATA'=>(new DateTime())->format('Y-m-d H:i:s')
+            ],
+            'remark'=>[
+                'DATA'=>'如纸巾有问题或没有领取到，请电话联系400-001-222'
+            ]
+        ]
+    ]);
+
+    var_export($response);
+} catch (\EasyWeChat\Kernel\Exceptions\InvalidArgumentException $e) {
+}
+
 
 
