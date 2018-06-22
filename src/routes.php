@@ -28,3 +28,12 @@ $app->group('/test',function (){
    $this->get('/success',\Action\Test\TestViewAction::class.":success");
 
 });
+
+$app->group('/front/view', function () {
+
+    $this->get('/index',\Action\FontMainViewAction::class.':index');
+    $this->get('/successList',\Action\FontMainViewAction::class.':successList');
+    $this->get('/contact',\Action\FontMainViewAction::class.':contact');
+    $this->get('/team',\Action\FontMainViewAction::class.':team');
+
+});
