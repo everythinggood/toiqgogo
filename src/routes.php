@@ -4,7 +4,7 @@
 //use Slim\Http\Response;
 
 // Routes
-$app->get('/',\Action\FontMainViewAction::class);
+$app->get('/',\Action\FontMainViewAction::class.':index');
 
 $app->get('/testwx',\Action\TestWXAction::class);
 
@@ -26,5 +26,14 @@ $app->group('/test',function (){
    $this->get('/offLine',\Action\Test\TestViewAction::class.":offLine");
    $this->get('/fail',\Action\Test\TestViewAction::class.":fail");
    $this->get('/success',\Action\Test\TestViewAction::class.":success");
+
+});
+
+$app->group('/front/view', function () {
+
+    $this->get('/index',\Action\FontMainViewAction::class.':index');
+    $this->get('/successList',\Action\FontMainViewAction::class.':successList');
+    $this->get('/contact',\Action\FontMainViewAction::class.':contact');
+    $this->get('/team',\Action\FontMainViewAction::class.':team');
 
 });

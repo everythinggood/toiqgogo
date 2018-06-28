@@ -15,7 +15,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Views\Twig;
 
-class FontMainViewAction implements ActionInterface
+class FontMainViewAction
 {
     /**
      * @var Twig
@@ -28,9 +28,25 @@ class FontMainViewAction implements ActionInterface
         $this->view = $container[Container::NAME_VIEW];
     }
 
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
-    {
-        return $this->view->render($response,'/font/index.phtml');
+
+    public function index(ServerRequestInterface $request,ResponseInterface $response,array $args){
+        $active = 'index';
+        return $this->view->render($response,'/front/pages/index.phtml',compact('active'));
+    }
+
+    public function successList(ServerRequestInterface $request,ResponseInterface $response,array $args){
+        $active = 'success';
+        return $this->view->render($response,'/front/pages/success.phtml',compact('active'));
+    }
+
+    public function contact(ServerRequestInterface $request,ResponseInterface $response,array $args){
+        $active = 'contact';
+        return $this->view->render($response,'/front/pages/contact.phtml',compact('active'));
+    }
+
+    public function team(ServerRequestInterface $request,ResponseInterface $response,array $args){
+        $active = 'team';
+        return $this->view->render($response,'/front/pages/team.phtml',compact('active'));
     }
 
 }

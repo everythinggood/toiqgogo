@@ -6,14 +6,8 @@ $container = $app->getContainer();
 
 // view twig
 $container[\Contract\Container::NAME_VIEW] = function (\Psr\Container\ContainerInterface $c) {
-    $twigConfig = $c->get('settings')['twigConfig'];
-    $view = new \Slim\Views\Twig($twigConfig['template'],$twigConfig['options']);
-
-    $router = $c->get('router');
-    $url = \Slim\Http\Uri::createFromEnvironment(new \Slim\Http\Environment($_SERVER));
-    $view->addExtension(new \Slim\Views\TwigExtension($router,$url));
-
-    return $view;
+    $settings = $c->get('settings')['renderer'];
+    return new Slim\Views\PhpRenderer($settings['template_path']);
 };
 
 // monolog

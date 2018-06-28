@@ -38,7 +38,7 @@ class __TwigTemplate_2ece62929d8a5cb029d016938540fa52ae91573a8d2b6887fea0677617c
 
     <!-- <link rel=\"stylesheet\" href=\"css/style.css\"> -->
 
-    <link rel=\"stylesheet\" href=\"/css/index.css\">
+    <link rel=\"stylesheet\" href=\"/css/index.css?v=20180611\">
 
     <link rel=\"stylesheet\" href=\"/css/animate.css\">  
 
@@ -82,6 +82,9 @@ class __TwigTemplate_2ece62929d8a5cb029d016938540fa52ae91573a8d2b6887fea0677617c
             <a href=\"#five\" class=\"five\" rel=five\"\" onclick=\"active(this)\">关于我们</a>
             <a href=\"#six\" class=\"six\" rel=\"six\" onclick=\"active(this)\">联系我们</a>
         </nav>
+
+        <div class=\"header_tip\"><p>纸色免费纸巾机,是集合手帕纸巾派送，</p>
+                <p>广告展示为一体的互联网科技设备</p></div>
     </div>
 
     <a href=\"#\" name=\"second\"></a>
@@ -186,7 +189,8 @@ class __TwigTemplate_2ece62929d8a5cb029d016938540fa52ae91573a8d2b6887fea0677617c
 
 </body>
 
-</html>";
+</html>
+";
     }
 
     public function getTemplateName()
@@ -219,7 +223,7 @@ class __TwigTemplate_2ece62929d8a5cb029d016938540fa52ae91573a8d2b6887fea0677617c
 
     <!-- <link rel=\"stylesheet\" href=\"css/style.css\"> -->
 
-    <link rel=\"stylesheet\" href=\"/css/index.css\">
+    <link rel=\"stylesheet\" href=\"/css/index.css?v=20180611\">
 
     <link rel=\"stylesheet\" href=\"/css/animate.css\">  
 
@@ -263,6 +267,9 @@ class __TwigTemplate_2ece62929d8a5cb029d016938540fa52ae91573a8d2b6887fea0677617c
             <a href=\"#five\" class=\"five\" rel=five\"\" onclick=\"active(this)\">关于我们</a>
             <a href=\"#six\" class=\"six\" rel=\"six\" onclick=\"active(this)\">联系我们</a>
         </nav>
+
+        <div class=\"header_tip\"><p>纸色免费纸巾机,是集合手帕纸巾派送，</p>
+                <p>广告展示为一体的互联网科技设备</p></div>
     </div>
 
     <a href=\"#\" name=\"second\"></a>
@@ -367,6 +374,7 @@ class __TwigTemplate_2ece62929d8a5cb029d016938540fa52ae91573a8d2b6887fea0677617c
 
 </body>
 
-</html>", "/font/index.phtml", "/var/www/slim/templates/font/index.phtml");
+</html>
+", "/font/index.phtml", "/var/www/slim/templates/font/index.phtml");
     }
 }
